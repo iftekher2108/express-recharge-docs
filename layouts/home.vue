@@ -1,4 +1,5 @@
 <template>
-    <Header/>
-    <solt/>
+    <Header />
+    <slot />
+    <Footer />
 </template>

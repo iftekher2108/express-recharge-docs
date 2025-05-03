@@ -21,25 +21,25 @@
                     <li><NuxtLink to="/about">Item 3</NuxtLink></li>
                 </ul>
             </div>
-            <a class="btn btn-ghost text-xl">daisyUI</a>
+            <NuxtLink to="/" class="btn btn-ghost text-xl">daisyUI</NuxtLink>
         </div>
         <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1">
-                <li><a>Item 1</a></li>
-                <li>
+            <ul class="menu w-full menu-horizontal">
+                <li><NuxtLink to="/docs/v1_0_0/introduction">Docs</NuxtLink></li>
+                <li class="static">
                     <details>
                         <summary>Parent</summary>
-                        <ul class="p-2">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
+                        <ul class="p-1">
+                            <li class="w-full"><a>fhdfgh</a></li>
+                            <li class="w-full"><a>Sub menu 2bhxdfh</a></li>
                         </ul>
                     </details>
                 </li>
-                <li><a>Item 3</a></li>
+                <li><NuxtLink to="/about">Item 3</NuxtLink></li>
             </ul>
         </div>
         <div class="navbar-end">
-            <a class="btn">Button</a>
+            <NuxtLink class="btn btn-primary">Get Started</NuxtLink>
         </div>
     </div>
 </template>

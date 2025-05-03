@@ -11,15 +11,11 @@ export default defineNuxtConfig({
   ],
   app: {
     pageTransition: {
-      name: "page",
-      mode: "out-in", // default
-    },
-    layoutTransition: {
-      name: "layout",
-      mode: "out-in",
+      name:"page",
+      mode:"default"
     },
     head: {
-      title: "Nuxt", // default fallback title
+      title: "Express Recharge", // default fallback title
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1, maximum-scale=1",
       htmlAttrs: {
