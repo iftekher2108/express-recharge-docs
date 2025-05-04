@@ -1,6 +1,6 @@
 <script setup>
 
-const date = new Date()
+const date = new Date();
 
 </script>
 
@@ -9,7 +9,7 @@ const date = new Date()
         <div class="grid lg:grid-cols-8 md:grid-cols-4 gap-6">
 
             <div class=" col-span-2">
-                <NuxtImg src="" class="mb-3" alt="logo" />
+                <!-- <NuxtImg src="" class="mb-3" alt="logo" /> -->
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad saepe asperiores sequi modi suscipit
                     accusantium dicta nam! Suscipit, illo quaerat pariatur quos mollitia repudiandae eum.</p>
 
@@ -58,11 +58,11 @@ const date = new Date()
                     </li>
 
                     <li class="nav-link"><i class="fa-solid me-3 fa-arrow-right"></i>
-                        <NuxtLink to="/docs/v1_0_0/quick-start">Team</NuxtLink>
+                        <NuxtLink to="/team">Team</NuxtLink>
                     </li>
 
                     <li class="nav-link"><i class="fa-solid me-3 fa-arrow-right"></i>
-                        <NuxtLink to="/docs/v1_0_0/quick-start">FAQ</NuxtLink>
+                        <NuxtLink to="/faq">FAQ</NuxtLink>
                     </li>
                 </ul>
             </div>
@@ -123,7 +123,7 @@ const date = new Date()
             // padding: 10px 15px;
             height: 50px;
             width: 50px;
-            border: 3px solid var(--color-primary);
+            border: 2px solid var(--color-primary);
             border-radius: 5px;
             transition: all 0.3s ease-in-out;
 

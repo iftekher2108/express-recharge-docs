@@ -8,7 +8,6 @@
         <div class="col-span-9">
             <slot />
         </div>
-
     </div>
     <Footer/>
 </template>

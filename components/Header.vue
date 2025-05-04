@@ -1,5 +1,4 @@
 <template>
-    <div>
         <div class="flex items-center justify-between gap-3">
             <div>
 
@@ -26,8 +25,9 @@
                     <details>
                         <summary>About Us</summary>
                         <ul class="p-1">
-                            <li class="w-full"><a>fhdfgh</a></li>
-                            <li class="w-full"><a>Sub menu 2bhxdfh</a></li>
+                            <li class="w-full"><NuxtLink to="/about-us">About Us</NuxtLink></li>
+                            <li class="w-full"><NuxtLink to="/">fhdfgh</NuxtLink></li>
+                            <li class="w-full"><NuxtLink to="/">Sub menu</NuxtLink></li>
                         </ul>
                     </details>
                 </li>
@@ -38,10 +38,10 @@
                             <li><a>Submenu 2</a></li>
                         </ul>
                     </li> -->
-                    <li><NuxtLink to="/about">Item 3</NuxtLink></li>
+                    <li><NuxtLink to="/about-us">Item 3</NuxtLink></li>
                 </ul>
             </div>
-            <NuxtLink to="/" class="btn btn-ghost text-xl">daisyUI</NuxtLink>
+            <NuxtLink to="/" class="btn btn-ghost text-xl">Express Recharge</NuxtLink>
         </div>
         <div class="navbar-center hidden lg:flex">
             <ul class="menu w-full menu-horizontal">
@@ -50,18 +50,18 @@
                     <details>
                         <summary>About Us</summary>
                         <ul class="p-1">
+                            <li class="w-full"><NuxtLink to="/about-us">About Us</NuxtLink></li>
                             <li class="w-full"><a>fhdfgh</a></li>
                             <li class="w-full"><a>Sub menu 2bhxdfh</a></li>
                         </ul>
                     </details>
                 </li>
-                <li><NuxtLink to="/about">Item 3</NuxtLink></li>
+                <li><NuxtLink to="/about-us">Item 3</NuxtLink></li>
             </ul>
         </div>
         <div class="navbar-end">
             <NuxtLink class="btn btn-primary">Get Started</NuxtLink>
         </div>
     </div> 
-    </div>
-    
+
 </template>
