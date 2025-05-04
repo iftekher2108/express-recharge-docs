@@ -5,6 +5,8 @@
 </template>
 
 <style>
+@import url('@fortawesome/fontawesome-free/css/all.min.css');
+
 .page-enter-active,
 .page-leave-active {
   transition: all 0.4s;

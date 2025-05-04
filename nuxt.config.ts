@@ -3,16 +3,19 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
+
   vite: {
     plugins: [tailwindcss()],
   },
+
   css:[
     '~/assets/app.css',
   ],
+
   app: {
     pageTransition: {
       name:"page",
-      mode:"default"
+      mode:"out-in"
     },
     head: {
       title: "Express Recharge", // default fallback title
@@ -24,4 +27,6 @@ export default defineNuxtConfig({
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },
   },
+
+  modules: ["@nuxt/image"],
 });

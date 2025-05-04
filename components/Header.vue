@@ -1,5 +1,16 @@
 <template>
-    <div class="navbar bg-base-100 shadow-sm">
+    <div>
+        <div class="flex items-center justify-between gap-3">
+            <div>
+
+            </div>
+
+            <div class="social-icon">
+
+            </div>
+
+        </div>
+       <div class="navbar bg-base-100 shadow-sm">
         <div class="navbar-start">
             <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -10,14 +21,23 @@
                     </svg>
                 </div>
                 <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                    <li><NuxtLink to="/">Item 1</NuxtLink></li>
-                    <li>
-                        <a>Parent</a>
+                    <li><NuxtLink to="/docs/v1_0_0/introduction">Docs</NuxtLink></li>
+                    <li class="static">
+                    <details>
+                        <summary>About Us</summary>
+                        <ul class="p-1">
+                            <li class="w-full"><a>fhdfgh</a></li>
+                            <li class="w-full"><a>Sub menu 2bhxdfh</a></li>
+                        </ul>
+                    </details>
+                </li>
+                    <!-- <li>
+                        <a>About Us</a>
                         <ul class="p-2">
                             <li><a>Submenu 1</a></li>
                             <li><a>Submenu 2</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                     <li><NuxtLink to="/about">Item 3</NuxtLink></li>
                 </ul>
             </div>
@@ -28,7 +48,7 @@
                 <li><NuxtLink to="/docs/v1_0_0/introduction">Docs</NuxtLink></li>
                 <li class="static">
                     <details>
-                        <summary>Parent</summary>
+                        <summary>About Us</summary>
                         <ul class="p-1">
                             <li class="w-full"><a>fhdfgh</a></li>
                             <li class="w-full"><a>Sub menu 2bhxdfh</a></li>
@@ -41,5 +61,7 @@
         <div class="navbar-end">
             <NuxtLink class="btn btn-primary">Get Started</NuxtLink>
         </div>
+    </div> 
     </div>
+    
 </template>
