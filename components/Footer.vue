@@ -5,16 +5,20 @@ const date = new Date();
 </script>
 
 <template>
-    <div class="footer-section p-10">
+    <div class="footer-section bg-base-300 p-10">
         <div class="grid lg:grid-cols-8 md:grid-cols-4 gap-6">
 
             <div class=" col-span-2">
                 <NuxtLink to="/" class="flex gap-2 items-center">
                     <NuxtImg src="/images/logo.png" class="size-14 mb-3" alt="logo" />
-                    <p class=" text-3xl text-primary"><p class="leading-1 font-bold">Express</p><p class=" font-light">Recharge</p></p>
+                    <p class=" text-3xl text-primary">
+                    <span class="leading-1 font-bold">Express</span>
+                    <span class="font-light">Recharge</span>
+                    </p>
                 </NuxtLink>
                 <p>
-                    Express Recharge API Framework – Powerful MySQL Integration & Automated Route Generation for Fast Development
+                    Express Recharge API Framework – Powerful MySQL Integration & Automated Route Generation for Fast
+                    Development
                 </p>
 
             </div>
@@ -95,8 +99,10 @@ const date = new Date();
 .footer-section {
     .footer-menu {
         .nav-link {
+
             transition: all 0.3s ease-in-out;
             font-size: var(--text-base);
+            font-weight: 600;
             line-height: var(--text-base--line-height);
 
             i {

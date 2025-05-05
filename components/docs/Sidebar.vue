@@ -4,9 +4,18 @@
             <!-- <NuxtImg src="~/assets/" alt="Logo" /> -->
         </div>
         <ul class="menu w-full rounded-box">
-            <li><NuxtLink to="/docs/v1_0_0/introduction"><i class="fa-solid fa-circle-info"></i>Introduction</NuxtLink></li>
-            <li> <NuxtLink to="/docs/v1_0_0/installation"><i class="fa-solid fa-play"></i>Installation</NuxtLink></li>
-            <li> <NuxtLink to="/docs/v1_0_0/quick-start"><i class="fa-solid fa-hourglass-start"></i>Quick Start</NuxtLink></li>
+            <li>
+                <NuxtLink exact-active-class="active" to="/docs/v1_0_0/introduction"><i
+                        class="fa-solid fa-circle-info"></i>Introduction</NuxtLink>
+            </li>
+            <li>
+                <NuxtLink exact-active-class="active" to="/docs/v1_0_0/installation"><i
+                        class="fa-solid fa-play"></i>Installation</NuxtLink>
+            </li>
+            <li>
+                <NuxtLink exact-active-class="active" to="/docs/v1_0_0/quick-start"><i
+                        class="fa-solid fa-hourglass-start"></i>Quick Start</NuxtLink>
+            </li>
 
             <li>
                 <details>
@@ -28,17 +37,28 @@
             </li>
             <li><a>Item 3</a></li>
         </ul>
- 
+
     </div>
 </template>
 
 <style lang="scss" scoped>
 .menu {
     li {
+        .active {
+            background: var(--color-primary);
+
+            i {
+                background: var(--color-neutral);
+            }
+        }
+
         color: white;
-        a,summary{
-            padding:12px;
+
+        a,
+        summary {
+            padding: 12px;
             margin-bottom: 5px;
+
             i {
                 transition: all 0.3s ease-in-out;
                 // padding: 10px;
@@ -53,8 +73,10 @@
                 background: var(--color-primary);
 
             }
+
             &:hover {
                 background: var(--color-primary);
+
                 i {
                     background: var(--color-neutral);
                 }
@@ -63,6 +85,4 @@
         }
     }
 }
-
-
 </style>

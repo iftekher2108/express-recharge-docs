@@ -5,6 +5,6 @@ definePageMeta({
 </script>
 <template>
     <div>
-        this is installation page
+       <h3 class=" text-2xl">Installation</h3>
     </div>
 </template>

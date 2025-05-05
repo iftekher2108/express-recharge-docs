@@ -5,6 +5,9 @@ definePageMeta({
 </script>
 <template>
     <div>
-        this is docs page
+        <h1 class=" text-3xl font-bold mb-4">Introduction</h1>
+        <p>
+
+        </p>
     </div>
 </template>
