@@ -41,7 +41,9 @@
                     <li><NuxtLink to="/about-us">Item 3</NuxtLink></li>
                 </ul>
             </div>
-            <NuxtLink to="/" class="btn btn-ghost text-xl">Express Recharge</NuxtLink>
+            <NuxtLink to="/" class=" hover:bg-neutral text-xl">
+                <NuxtImg src="/images/logo.png" class=" size-14" alt="logo" />
+            </NuxtLink>
         </div>
         <div class="navbar-center hidden lg:flex">
             <ul class="menu w-full menu-horizontal">

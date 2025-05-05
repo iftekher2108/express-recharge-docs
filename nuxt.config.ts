@@ -29,4 +29,9 @@ export default defineNuxtConfig({
   },
 
   modules: ["@nuxt/image"],
+  image: {
+    // domains:['localhost']
+    quality: 60,
+    format: ['webp'],
+  }
 });

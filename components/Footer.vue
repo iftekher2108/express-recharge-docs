@@ -9,9 +9,13 @@ const date = new Date();
         <div class="grid lg:grid-cols-8 md:grid-cols-4 gap-6">
 
             <div class=" col-span-2">
-                <!-- <NuxtImg src="" class="mb-3" alt="logo" /> -->
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad saepe asperiores sequi modi suscipit
-                    accusantium dicta nam! Suscipit, illo quaerat pariatur quos mollitia repudiandae eum.</p>
+                <NuxtLink to="/" class="flex gap-2 items-center">
+                    <NuxtImg src="/images/logo.png" class="size-14 mb-3" alt="logo" />
+                    <p class=" text-3xl text-primary"><p class="leading-1 font-bold">Express</p><p class=" font-light">Recharge</p></p>
+                </NuxtLink>
+                <p>
+                    Express Recharge API Framework – Powerful MySQL Integration & Automated Route Generation for Fast Development
+                </p>
 
             </div>
 
@@ -73,10 +77,13 @@ const date = new Date();
         <div class="flex items-center justify-between gap-4">
             <p>Copyright © {{ date.getFullYear() }} by <span class="copyright">Express Recharge</span></p>
             <div class="social-icon flex items-center justify-center gap-2">
-                <NuxtLink href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></NuxtLink>
-                <NuxtLink href="https://github.com/iftekher2108" target="_blank"><i class="fa-brands fa-github"></i></NuxtLink>
-                <NuxtLink href="https://www.linkedin.com/in/iftekhermahmud1/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></NuxtLink>
-            
+                <NuxtLink href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i>
+                </NuxtLink>
+                <NuxtLink href="https://github.com/iftekher2108" target="_blank"><i class="fa-brands fa-github"></i>
+                </NuxtLink>
+                <NuxtLink href="https://www.linkedin.com/in/iftekhermahmud1/" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i></NuxtLink>
+
             </div>
         </div>
 
@@ -110,12 +117,14 @@ const date = new Date();
     .copyright {
         transition: all 0.3s ease-in-out;
         font-weight: 800;
+
         &:hover {
             color: var(--color-primary);
         }
     }
+
     .social-icon {
-        a{
+        a {
             color: var(--color-primary);
             display: flex;
             align-items: center;
@@ -133,7 +142,7 @@ const date = new Date();
                 border-radius: 50px;
             }
 
-            i{
+            i {
                 font-size: 20px;
                 transition: all 0.3s ease-in-out;
             }
