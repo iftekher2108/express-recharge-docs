@@ -1,14 +1,13 @@
 <template>
-    <Header/>
+    <Header />
     <div class="grid grid-cols-12 gap-4">
         <div class="col-span-3">
             <docsSidebar />
         </div>
 
         <div class="col-span-9">
-            <slot />
+            <NuxtPage />
         </div>
     </div>
-    <Footer/>
+    <Footer />
 </template>
-

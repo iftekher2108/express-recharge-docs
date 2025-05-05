@@ -34,13 +34,30 @@
 
 <style lang="scss" scoped>
 .menu {
-    gap: 7px;
     li {
         color: white;
         a,summary{
             padding:12px;
+            margin-bottom: 5px;
+            i {
+                transition: all 0.3s ease-in-out;
+                // padding: 10px;
+                height: 35px;
+                width: 35px;
+                font-size: 13px;
+                display: flex;
+                line-height: 0;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                background: var(--color-primary);
+
+            }
             &:hover {
                 background: var(--color-primary);
+                i {
+                    background: var(--color-neutral);
+                }
             }
 
         }

@@ -60,8 +60,12 @@
             </ul>
         </div>
         <div class="navbar-end">
-            <NuxtLink class="btn btn-primary">Get Started</NuxtLink>
+            <NuxtLink to="/docs/v1_0_0/introduction" class="btn btn-primary">Get Started</NuxtLink>
         </div>
     </div> 
 
 </template>
+
+<style scoped>
+
+</style>
