@@ -1,21 +1,31 @@
 <script setup>
 definePageMeta({
   layout: 'home',
-  title: "Express Recharge - iftekher",
-  meta: [
-  { name: 'keywords', content: `
   
-  ` },
+})
 
-    { name: 'description', content:`
-    
-    `},
-    { property: 'og:title', content: `
-    
-    ` },
-    { property: 'og:description', content: `
-    
-    ` },
+useHead({
+  title: "Express Recharge Node.js Backend framework",
+  meta: [
+    {
+      name:"author",
+      content:"iftekher mahmud <iftekhermahmud1@gmail.com>"
+    },
+    {
+      name: 'keywords',
+      content:'express recharge, node.js backend, express.js 5, sequelize orm, bcryptjs, jwt authentication, multer file upload, mysql2 database, express rate limit, cors middleware, dotenv config, puppeteer automation, nodemon, express-validator, module-alias, recharge-cli'
+    },
+    {
+      name: 'description',
+      content: 'Explore the best Node.js backend framwork including Express.js, Sequelize ORM, JWT authentication, BcryptJS, and Puppeteer. Build fast, secure, and scalable APIs.'
+    },
+    {
+      property: 'og:title',
+      content: 'Top Node.js Backend framework'},
+    {
+      property: 'og:description',
+      content:'Master the latest Node.js backend tools like Express, Sequelize, and JWT to build powerful APIs.'
+    },
     // { property: 'og:image', content: post.image },
     // { property: 'og:url', content: `https://yoursite.com/blog/${post.slug}` },
   ],
@@ -23,6 +33,8 @@ definePageMeta({
   //   { rel: 'canonical', href: `https://yoursite.com/blog/${post.slug}` }
   // ]
 })
+
+
 </script>
 <template>
   <div class="home-hero lg:p-10 md:p-7 p-4">
@@ -50,7 +62,7 @@ definePageMeta({
       </div>
 
       <div class="col-span-1">
-        <NuxtImg src="/images/hero-image.png" class="rounded" alt="Hero-image" />
+        <NuxtImg src="/images/hero-image.png" class="rounded w-full" alt="Hero-image" />
       </div>
 
     </div>
@@ -178,6 +190,4 @@ definePageMeta({
 .feature-section .card {
   min-height: 200px;
 }
-
-
 </style>

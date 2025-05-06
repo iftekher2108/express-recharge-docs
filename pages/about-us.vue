@@ -44,7 +44,7 @@ definePageMeta({
       </div>
 
       <div class="col-span-1">
-        <NuxtImg src="/images/iftekher-author.jpg" class="rounded" alt="Iftekher" />
+        <NuxtImg src="/images/iftekher-author.jpg" class="rounded w-full" alt="Iftekher-mahmud" />
       </div>
 
     </div>

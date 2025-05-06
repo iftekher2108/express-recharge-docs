@@ -18,7 +18,17 @@ export default defineNuxtConfig({
       mode:"out-in"
     },
     head: {
-      title: "Express Recharge", // default fallback title
+      title: "Express Recharge - iftekher", // default fallback title
+      meta: [
+        {
+          name: 'author',
+          content: 'iftekher mahmud <iftekhermahmud1@gmail.com>'
+        },
+        {
+          name: 'description',
+          content: 'Default site description about Express Recharge API system.'
+        }
+      ],
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1, maximum-scale=1",
       htmlAttrs: {
