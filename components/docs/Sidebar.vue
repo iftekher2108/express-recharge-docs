@@ -18,7 +18,7 @@ const doc_v = "v1_0_0"
             </li>
             <li>
                 <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/quick-overview`"><i
-                        class="fa-solid fa-hourglass-start"></i>Quick Start</NuxtLink>
+                        class="fa-solid fa-hourglass-start"></i>Quick Overview</NuxtLink>
             </li>
 
             <li>

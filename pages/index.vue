@@ -48,9 +48,9 @@ useHead({
           <p> Fast, Feature-Rich Tools for Seamless Integration & Scalable Productivity.</p>
           <p>Versatile & Developer-Friendly Express Recharge API System for Seamless Integration.</p>
 
-          <div class="bg-base-200 font-medium rounded-lg my-3 p-6">
+          <Terminal>
             npx @iftekher2108/express-recharge project-name
-          </div>
+          </Terminal>
 
         </div>
 
