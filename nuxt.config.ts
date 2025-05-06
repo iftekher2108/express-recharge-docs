@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [tailwindcss(),],
   },
 
   css:[
@@ -27,11 +27,23 @@ export default defineNuxtConfig({
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },
   },
-
-  modules: ["@nuxt/image"],
+  modules: ["@nuxt/image", '@nuxtjs/sitemap', '@nuxtjs/robots'],
   image: {
     // domains:['localhost']
-    quality: 60,
+    quality: 50,
     format: ['webp'],
-  }
+  },
+  // sitemap: {
+  //   hostname: 'https://yourdomain.com',
+  //   gzip: true,
+  //   // routes: async () => {
+  //   //   // Optionally fetch dynamic routes like blog posts
+  //   //   // return fetchBlogRoutes();
+  //   // }
+  // },
+  // robots: {
+  //   UserAgent: '*',
+  //   Disallow: '',
+  //   Sitemap: 'https://yourdomain.com/sitemap.xml'
+  // }
 });

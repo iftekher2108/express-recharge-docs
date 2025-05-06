@@ -1,3 +1,7 @@
+<script setup>
+const doc_v = "v1_0_0"
+
+</script>
 <template>
     <div class="header w-full">
         <div class="flex items-center justify-between gap-3">
@@ -23,7 +27,7 @@
                     <ul tabindex="0"
                         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                         <li>
-                            <NuxtLink to="/docs/v1_0_0/introduction">Docs</NuxtLink>
+                            <NuxtLink :to="`/docs/${doc_v}/introduction`">Docs</NuxtLink>
                         </li>
                         <li class="static">
                             <details>
@@ -48,9 +52,9 @@
                             <li><a>Submenu 2</a></li>
                         </ul>
                     </li> -->
-                        <li>
+                        <!-- <li>
                             <NuxtLink to="/about-us">Item 3</NuxtLink>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
                 <NuxtLink to="/" class="text-xl">
@@ -60,7 +64,7 @@
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu w-full menu-horizontal">
                     <li>
-                        <NuxtLink to="/docs/v1_0_0/introduction">Docs</NuxtLink>
+                        <NuxtLink :to="`/docs/${doc_v}/introduction`">Docs</NuxtLink>
                     </li>
                     <li class="static">
                         <details>
@@ -74,13 +78,13 @@
                             </ul>
                         </details>
                     </li>
-                    <li>
+                    <!-- <li>
                         <NuxtLink to="/about-us">Item 3</NuxtLink>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <div class="navbar-end">
-                <NuxtLink to="/docs/v1_0_0/introduction" class="btn btn-primary">Get Started</NuxtLink>
+                <NuxtLink :to="`/docs/${doc_v}/introduction`" class="btn btn-primary">Get Started</NuxtLink>
             </div>
         </div>
     </div>

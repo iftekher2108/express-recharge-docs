@@ -1,5 +1,5 @@
 <script setup>
-
+const doc_v = "v1_0_0"
 const date = new Date();
 
 </script>
@@ -9,12 +9,12 @@ const date = new Date();
         <div class="grid lg:grid-cols-8 md:grid-cols-4 gap-6">
 
             <div class=" col-span-2">
-                <NuxtLink to="/" class="flex gap-2 items-center">
+                <NuxtLink to="/" class="flex gap-2">
                     <NuxtImg src="/images/logo.png" class="size-14 mb-3" alt="logo" />
-                    <p class=" text-3xl text-primary">
-                    <span class="leading-1 font-bold">Express</span>
-                    <span class="font-light">Recharge</span>
-                    </p>
+                    <div class=" text-2xl text-primary">
+                        <span class="leading-0 font-bold">Express</span>
+                        <p class="leading-0 text-primary-content font-light">Recharge</p>
+                    </div>
                 </NuxtLink>
                 <p>
                     Express Recharge API Framework – Powerful MySQL Integration & Automated Route Generation for Fast
@@ -28,14 +28,15 @@ const date = new Date();
                 <ul class="footer-menu flex flex-col gap-2 ">
 
                     <li class="nav-link"><i class="fa-solid me-3 fa-arrow-right"></i>
-                        <NuxtLink to="/docs/v1_0_0/introduction">Introduction</NuxtLink>
+                        <NuxtLink :to="`/docs/${doc_v}/introduction`">Introduction</NuxtLink>
                     </li>
                     <li class="nav-link"><i class="fa-solid me-3 fa-arrow-right"></i>
-                        <NuxtLink to="/docs/v1_0_0/quick-start">Quick Start</NuxtLink>
+                        <NuxtLink :to="`/docs/${doc_v}/installation`">Installation</NuxtLink>
                     </li>
                     <li class="nav-link"><i class="fa-solid me-3 fa-arrow-right"></i>
-                        <NuxtLink to="/docs/v1_0_0/quick-start">Documentation</NuxtLink>
+                        <NuxtLink :to="`/docs/${doc_v}/quick-overview`">Quick Overview</NuxtLink>
                     </li>
+                    
                 </ul>
             </div>
 

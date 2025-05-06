@@ -1,19 +1,23 @@
+<script setup>
+const doc_v = "v1_0_0"
+
+</script>
 <template>
-    <div class="flex flex-col justify-center items-center rounded-lg gap-4 py-4 bg-base-300">
+    <div class="flex flex-col min-h-full items-center rounded-lg gap-4 py-4 bg-base-300">
         <div class="logo">
             <!-- <NuxtImg src="~/assets/" alt="Logo" /> -->
         </div>
         <ul class="menu w-full rounded-box">
             <li>
-                <NuxtLink exact-active-class="active" to="/docs/v1_0_0/introduction"><i
+                <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/introduction`"><i
                         class="fa-solid fa-circle-info"></i>Introduction</NuxtLink>
             </li>
             <li>
-                <NuxtLink exact-active-class="active" to="/docs/v1_0_0/installation"><i
+                <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/installation`"><i
                         class="fa-solid fa-play"></i>Installation</NuxtLink>
             </li>
             <li>
-                <NuxtLink exact-active-class="active" to="/docs/v1_0_0/quick-start"><i
+                <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/quick-overview`"><i
                         class="fa-solid fa-hourglass-start"></i>Quick Start</NuxtLink>
             </li>
 

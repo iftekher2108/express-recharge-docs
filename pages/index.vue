@@ -1,6 +1,27 @@
 <script setup>
 definePageMeta({
   layout: 'home',
+  title: "Express Recharge - iftekher",
+  meta: [
+  { name: 'keywords', content: `
+  
+  ` },
+
+    { name: 'description', content:`
+    
+    `},
+    { property: 'og:title', content: `
+    
+    ` },
+    { property: 'og:description', content: `
+    
+    ` },
+    // { property: 'og:image', content: post.image },
+    // { property: 'og:url', content: `https://yoursite.com/blog/${post.slug}` },
+  ],
+  // link: [
+  //   { rel: 'canonical', href: `https://yoursite.com/blog/${post.slug}` }
+  // ]
 })
 </script>
 <template>
@@ -38,9 +59,9 @@ definePageMeta({
 
   <div class="feature-section p-5">
 
-    <div class="grid grid-cols-10 mb-4">
+    <div class="grid lg:grid-cols-10 md:grid-cols-8 lg:p-0 md:p-0 p-3 mb-4">
 
-      <div class="lg:col-span-6">
+      <div class="col-span-6">
         <h1 class="font-extrabold text-4xl mb-4">features & grow</h1>
         <p>
           Recharge grows and adapts with your needs while providing
@@ -52,7 +73,7 @@ definePageMeta({
     </div>
 
 
-    <div class="grid grid-cols-3 gap-3">
+    <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3">
 
       <div class="col-span-1">
         <div class="glass card transition duration-300 ease-in-out hover:bg-primary/80">
