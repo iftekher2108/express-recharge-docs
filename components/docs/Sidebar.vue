@@ -3,7 +3,7 @@ const doc_v = "v1_0_0"
 
 </script>
 <template>
-    <div class="flex flex-col min-h-full items-center rounded-lg gap-4 py-4 bg-base-300">
+    <div class="flex flex-col min-h-full w-full items-center rounded-lg gap-4 py-4 bg-base-300">
         <div class="logo">
             <!-- <NuxtImg src="~/assets/" alt="Logo" /> -->
         </div>

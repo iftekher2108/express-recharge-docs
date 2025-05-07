@@ -1,7 +1,6 @@
 <script setup>
 definePageMeta({
   layout: 'home',
-  
 })
 
 useHead({
@@ -88,7 +87,7 @@ useHead({
     <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3">
 
       <div class="col-span-1">
-        <div class="glass card transition duration-300 ease-in-out hover:bg-primary/80">
+        <div class="glass card transition duration-300 ease-in-out hover:bg-primary/40">
           <div class="text-center card-body">
             <h3 class="uppercase font-bold tracking-widest text-2xl">Zero Configuration</h3>
             <p>
@@ -99,7 +98,7 @@ useHead({
       </div>
 
       <div class="col-span-1">
-        <div class="glass card transition duration-300 ease-in-out hover:bg-primary/80">
+        <div class="glass card transition duration-300 ease-in-out hover:bg-primary/40">
           <div class="text-center card-body">
             <h3 class="uppercase font-bold tracking-widest text-2xl">Routing & Layouts</h3>
             <p>
@@ -111,7 +110,7 @@ useHead({
       </div>
 
       <div class="col-span-1">
-        <div class="glass card transition duration-300 ease-in-out hover:bg-primary/80">
+        <div class="glass card transition duration-300 ease-in-out hover:bg-primary/40">
           <div class="text-center card-body">
             <h3 class="uppercase font-bold tracking-widest text-2xl">Modular Architecture</h3>
             <p>
@@ -123,7 +122,7 @@ useHead({
       </div>
 
       <div class="col-span-1">
-        <div class="glass card transition duration-300 ease-in-out hover:bg-primary/80">
+        <div class="glass card transition duration-300 ease-in-out hover:bg-primary/40">
           <div class="text-center card-body">
             <h3 class="uppercase font-bold tracking-widest text-2xl">Middleware</h3>
             <p>
@@ -134,7 +133,7 @@ useHead({
       </div>
 
       <div class="col-span-1">
-        <div class="glass card transition duration-300 ease-in-out hover:bg-primary/80">
+        <div class="glass card transition duration-300 ease-in-out hover:bg-primary/40">
           <div class="text-center card-body">
             <h3 class="uppercase font-bold tracking-widest text-2xl">Approachable</h3>
             <p>
@@ -145,7 +144,7 @@ useHead({
       </div>
 
       <!-- <div class="col-span-1">
-        <div class="glass card transition duration-300 ease-in-out hover:bg-primary/80">
+        <div class="glass card transition duration-300 ease-in-out hover:bg-primary/40">
           <div class="text-center card-body">
             <h3 class="uppercase font-bold tracking-widest text-2xl">Performance</h3>
             <p>
@@ -156,7 +155,7 @@ useHead({
       </div> -->
 
       <div class="col-span-1">
-        <div class="glass card transition duration-300 ease-in-out hover:bg-primary/80">
+        <div class="glass card transition duration-300 ease-in-out hover:bg-primary/40">
           <div class="text-center card-body">
             <h3 class="uppercase font-bold tracking-widest text-2xl">Versatile</h3>
             <p>

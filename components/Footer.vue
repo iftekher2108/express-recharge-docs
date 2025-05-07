@@ -43,7 +43,7 @@ const date = new Date();
             <div class=" col-span-2">
                 <h3 class="text-3xl font-bold uppercase text-primary mb-3">Tools</h3>
                 <ul class="footer-menu flex flex-col gap-2 ">
-                    <P>Coming Soon</P>
+                    <p>Coming Soon</p>
                     <!-- <li class="nav-link"><i class="fa-solid me-3 fa-arrow-right"></i>
                         <NuxtLink to="/docs/v1_0_0/introduction">Introduction</NuxtLink>
                     </li>

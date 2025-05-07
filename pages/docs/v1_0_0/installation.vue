@@ -3,9 +3,48 @@ const doc_v = "v1_0_0"
 definePageMeta({
     layout: 'docs',
 })
+
+useHead({
+    title: "Installation - Express Recharge Node.js Backend framework",
+    meta: [
+        {
+            name: "author",
+            content: "iftekher mahmud <iftekhermahmud1@gmail.com>"
+        },
+        {
+            name: 'keywords',
+            content: 'express recharge, node.js backend, express.js 5, sequelize orm, bcryptjs, jwt authentication, multer file upload, mysql2 database, express rate limit, cors middleware, dotenv config, puppeteer automation, nodemon, express-validator, module-alias, recharge-cli'
+        },
+        {
+            name: 'description',
+            content: 'Explore the best Node.js backend framwork including Express.js, Sequelize ORM, JWT authentication, BcryptJS, and Puppeteer. Build fast, secure, and scalable APIs.'
+        },
+        {
+            property: 'og:title',
+            content: 'Top Node.js Backend framework'
+        },
+        {
+            property: 'og:description',
+            content: 'Master the latest Node.js backend tools like Express, Sequelize, and JWT to build powerful APIs.'
+        },
+        // { property: 'og:image', content: post.image },
+        // { property: 'og:url', content: `https://yoursite.com/blog/${post.slug}` },
+    ],
+    // link: [
+    //   { rel: 'canonical', href: `https://yoursite.com/blog/${post.slug}` }
+    // ]
+})
+
 </script>
 <template>
     <div>
+        <div class="breadcrumbs text-sm">
+            <ul>
+                <li>home</li>
+                <li>Docs</li>
+                <li>installation</li>
+            </ul>
+        </div>
         <h1 class=" text-3xl font-bold mb-4">Installation of Express Recharge</h1>
 
         <p>
@@ -110,7 +149,8 @@ definePageMeta({
 
         <div class="flex my-4 justify-between p-4">
             <NuxtLink :to="`/docs/${doc_v}/introduction`" class="btn md:px-8 py-5 btn-primary">Introduction</NuxtLink>
-            <NuxtLink :to="`/docs/${doc_v}/installation`" class="btn md:px-8 py-5 btn-primary">Quick Overview</NuxtLink>
+            <NuxtLink :to="`/docs/${doc_v}/quick-overview`" class="btn md:px-8 py-5 btn-primary">Quick Overview
+            </NuxtLink>
         </div>
     </div>
 
