@@ -5,38 +5,65 @@ definePageMeta({
     layout: 'docs',
 })
 
-
 useHead({
-    title: "Quick Overview - Express Recharge Node.js Backend framework",
-    meta: [
-        {
-            name: "author",
-            content: "iftekher mahmud <iftekhermahmud1@gmail.com>"
-        },
-        {
-            name: 'keywords',
-            content: 'express recharge, node.js backend, express.js 5, sequelize orm, bcryptjs, jwt authentication, multer file upload, mysql2 database, express rate limit, cors middleware, dotenv config, puppeteer automation, nodemon, express-validator, module-alias, recharge-cli'
-        },
-        {
-            name: 'description',
-            content: 'Explore the best Node.js backend framwork including Express.js, Sequelize ORM, JWT authentication, BcryptJS, and Puppeteer. Build fast, secure, and scalable APIs.'
-        },
-        {
-            property: 'og:title',
-            content: 'Top Node.js Backend framework'
-        },
-        {
-            property: 'og:description',
-            content: 'Master the latest Node.js backend tools like Express, Sequelize, and JWT to build powerful APIs.'
-        },
-        // { property: 'og:image', content: post.image },
-        // { property: 'og:url', content: `https://yoursite.com/blog/${post.slug}` },
-    ],
-    // link: [
-    //   { rel: 'canonical', href: `https://yoursite.com/blog/${post.slug}` }
-    // ]
+  title: "Quick Overview - Express Recharge Node.js Backend Framework Features",
+  meta: [
+    {
+      name: "author",
+      content: "Iftekher Mahmud <iftekhermahmud1@gmail.com>"
+    },
+    {
+      name: 'keywords',
+      content: 'express recharge features, node.js backend overview, express.js modular structure, sequelize orm overview, express routing, node.js middleware, mysql2 integration, jwt authentication, backend architecture, secure node.js apps, express recharge quick overview, module based node framework'
+    },
+    {
+      name: 'description',
+      content: 'Get a quick overview of Express Recharge - a powerful Node.js backend framework with built-in modules, routing, middleware, database integration, JWT authentication, and scalable architecture.'
+    },
+    {
+      property: 'og:title',
+      content: 'Quick Overview - Features of Express Recharge Node.js Backend Framework'
+    },
+    {
+      property: 'og:description',
+      content: 'Explore the modular architecture, built-in authentication, ORM integration, middleware layers, and security features of Express Recharge.'
+    },
+    {
+      property: 'og:type',
+      content: 'article'
+    },
+    // {
+    //   property: 'og:url',
+    //   content: 'https://yourdomain.com/docs/v1_0_0/quick-overview' // Replace with actual URL
+    // },
+    // {
+    //   property: 'og:image',
+    //   content: 'https://yourdomain.com/images/express-recharge-overview-og.jpg' // Replace with your image
+    // },
+    {
+      name: 'twitter:card',
+      content: 'summary_large_image'
+    },
+    {
+      name: 'twitter:title',
+      content: 'Quick Overview - Node.js Backend Features with Express Recharge'
+    },
+    {
+      name: 'twitter:description',
+      content: 'Take a quick tour of the powerful features included in Express Recharge: modules, routing, middleware, database ORM, security, and more.'
+    },
+    // {
+    //   name: 'twitter:image',
+    //   content: 'https://yourdomain.com/images/express-recharge-overview-og.jpg' // Replace with your image
+    // }
+  ],
+//   link: [
+//     {
+//       rel: 'canonical',
+//       href: 'https://yourdomain.com/docs/v1_0_0/quick-overview' // Replace with actual URL
+//     }
+//   ]
 })
-
 
 </script>
 <template>

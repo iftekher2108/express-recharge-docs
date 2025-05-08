@@ -4,38 +4,65 @@ definePageMeta({
     layout: 'docs',
 })
 
-
 useHead({
-    title: "Introduction - Express Recharge Node.js Backend framework",
-    meta: [
-        {
-            name: "author",
-            content: "iftekher mahmud <iftekhermahmud1@gmail.com>"
-        },
-        {
-            name: 'keywords',
-            content: 'express recharge, node.js backend, express.js 5, sequelize orm, bcryptjs, jwt authentication, multer file upload, mysql2 database, express rate limit, cors middleware, dotenv config, puppeteer automation, nodemon, express-validator, module-alias, recharge-cli'
-        },
-        {
-            name: 'description',
-            content: 'Explore the best Node.js backend framwork including Express.js, Sequelize ORM, JWT authentication, BcryptJS, and Puppeteer. Build fast, secure, and scalable APIs.'
-        },
-        {
-            property: 'og:title',
-            content: 'Top Node.js Backend framework'
-        },
-        {
-            property: 'og:description',
-            content: 'Master the latest Node.js backend tools like Express, Sequelize, and JWT to build powerful APIs.'
-        },
-        // { property: 'og:image', content: post.image },
-        // { property: 'og:url', content: `https://yoursite.com/blog/${post.slug}` },
-    ],
-    // link: [
-    //   { rel: 'canonical', href: `https://yoursite.com/blog/${post.slug}` }
-    // ]
+  title: "Express Recharge - Modern Node.js Backend Framework for Secure API Development",
+  meta: [
+    {
+      name: "author",
+      content: "Iftekher Mahmud <iftekhermahmud1@gmail.com>"
+    },
+    {
+      name: 'keywords',
+      content: 'Express Recharge, Node.js backend framework, Express.js 5, RESTful API, Sequelize ORM, JWT authentication, BcryptJS, MySQL2, Multer file upload, dotenv config, Puppeteer automation, Nodemon, express-rate-limit, backend CLI, CORS middleware, module-alias, scalable backend, secure APIs'
+    },
+    {
+      name: 'description',
+      content: 'Express Recharge is a powerful Node.js backend framework built with Express.js 5 and Sequelize ORM. Supports JWT, bcryptjs, MySQL2, file upload with Multer, Puppeteer automation, and more. Ideal for building fast, scalable, and secure APIs.'
+    },
+    {
+      property: 'og:title',
+      content: 'Express Recharge – Top Node.js Backend Framework for Scalable APIs'
+    },
+    {
+      property: 'og:description',
+      content: 'Build secure and scalable RESTful APIs with Express Recharge. Features include JWT authentication, Sequelize ORM, Puppeteer automation, file uploads, and CLI support.'
+    },
+    {
+      property: 'og:type',
+      content: 'website'
+    },
+    // {
+    //   property: 'og:url',
+    //   content: 'https://yourdomain.com/docs/v1_0_0/introduction' // Replace with actual URL
+    // },
+    // {
+    //   property: 'og:image',
+    //   content: 'https://yourdomain.com/images/express-recharge-og.jpg' // Replace with actual image
+    // },
+    {
+      name: 'twitter:card',
+      content: 'summary_large_image'
+    },
+    {
+      name: 'twitter:title',
+      content: 'Express Recharge - Secure & Scalable Node.js Backend Framework'
+    },
+    {
+      name: 'twitter:description',
+      content: 'Explore Express Recharge, a Node.js framework with Express 5, Sequelize ORM, JWT, Multer, MySQL2, and CLI tools for backend developers.'
+    },
+    // {
+    //   name: 'twitter:image',
+    //   content: 'https://yourdomain.com/images/express-recharge-og.jpg' // Replace with actual image
+    // }
+  ],
+//   link: [
+//     {
+//       rel: 'canonical',
+//       href: 'https://yourdomain.com/docs/v1_0_0/introduction' // Replace with actual URL
+//     }
+//   ]
 })
-
 
 </script>
 <template>

@@ -4,37 +4,65 @@ definePageMeta({
   layout: 'home',
 })
 
-
 useHead({
-  title: "About Us - Express Recharge Node.js Backend framework",
+  title: "About Iftekher Mahmud - Full Stack Developer & Software Engineer | Express Recharge",
   meta: [
     {
-      name:"author",
-      content:"iftekher mahmud <iftekhermahmud1@gmail.com>"
+      name: "author",
+      content: "Iftekher Mahmud <iftekhermahmud1@gmail.com>"
     },
     {
-      name: 'keywords',
-      content:'express recharge, node.js backend, express.js 5, sequelize orm, bcryptjs, jwt authentication, multer file upload, mysql2 database, express rate limit, cors middleware, dotenv config, puppeteer automation, nodemon, express-validator, module-alias, recharge-cli'
+      name: "keywords",
+      content: "Iftekher Mahmud, software engineer, full stack developer, web developer, flutter developer, Laravel developer, Node.js backend, Express Recharge author, mobile app developer, Nuxt developer, personal portfolio"
     },
     {
-      name: 'description',
-      content: 'Explore the best Node.js backend framwork including Express.js, Sequelize ORM, JWT authentication, BcryptJS, and Puppeteer. Build fast, secure, and scalable APIs.'
+      name: "description",
+      content: "Learn more about Iftekher Mahmud Pervez — a skilled Full Stack Developer and Software Engineer passionate about building powerful web and mobile applications using modern tools like Express, Laravel, React, Flutter, and more."
     },
     {
-      property: 'og:title',
-      content: 'Top Node.js Backend framework'},
-    {
-      property: 'og:description',
-      content:'Master the latest Node.js backend tools like Express, Sequelize, and JWT to build powerful APIs.'
+      property: "og:title",
+      content: "About Iftekher Mahmud - Full Stack Developer | Express Recharge Framework Author"
     },
-    // { property: 'og:image', content: post.image },
-    // { property: 'og:url', content: `https://yoursite.com/blog/${post.slug}` },
+    {
+      property: "og:description",
+      content: "Meet Iftekher Mahmud, the creator of Express Recharge. Explore his background, expertise in modern development technologies, and mission to build scalable, secure digital solutions."
+    },
+    {
+      property: "og:type",
+      content: "profile"
+    },
+    // {
+    //   property: "og:url",
+    //   content: "https://yourdomain.com/about" // Replace with your actual URL
+    // },
+    // {
+    //   property: "og:image",
+    //   content: "https://yourdomain.com/images/iftekher-author.jpg" // Replace with your hosted image URL
+    // },
+    {
+      name: "twitter:card",
+      content: "summary_large_image"
+    },
+    {
+      name: "twitter:title",
+      content: "About Iftekher Mahmud - Full Stack Developer & Express Recharge Author"
+    },
+    {
+      name: "twitter:description",
+      content: "Explore the journey and skills of Iftekher Mahmud, a passionate software engineer and the mind behind Express Recharge."
+    },
+    // {
+    //   name: "twitter:image",
+    //   content: "https://yourdomain.com/images/iftekher-author.jpg" // Replace with your hosted image URL
+    // }
   ],
   // link: [
-  //   { rel: 'canonical', href: `https://yoursite.com/blog/${post.slug}` }
+  //   {
+  //     rel: "canonical",
+  //     href: "https://yourdomain.com/about" // Replace with your actual URL
+  //   }
   // ]
 })
-
 
 </script>
 

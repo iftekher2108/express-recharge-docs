@@ -66,9 +66,9 @@ const date = new Date();
                         <NuxtLink to="/about-us">About Us</NuxtLink>
                     </li>
 
-                    <li class="nav-link"><i class="fa-solid me-3 fa-arrow-right"></i>
+                    <!-- <li class="nav-link"><i class="fa-solid me-3 fa-arrow-right"></i>
                         <NuxtLink to="/team">Team</NuxtLink>
-                    </li>
+                    </li> -->
 
                     <li class="nav-link"><i class="fa-solid me-3 fa-arrow-right"></i>
                         <NuxtLink to="/faq">FAQ</NuxtLink>

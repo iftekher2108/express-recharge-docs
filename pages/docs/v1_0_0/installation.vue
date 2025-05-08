@@ -5,34 +5,63 @@ definePageMeta({
 })
 
 useHead({
-    title: "Installation - Express Recharge Node.js Backend framework",
-    meta: [
-        {
-            name: "author",
-            content: "iftekher mahmud <iftekhermahmud1@gmail.com>"
-        },
-        {
-            name: 'keywords',
-            content: 'express recharge, node.js backend, express.js 5, sequelize orm, bcryptjs, jwt authentication, multer file upload, mysql2 database, express rate limit, cors middleware, dotenv config, puppeteer automation, nodemon, express-validator, module-alias, recharge-cli'
-        },
-        {
-            name: 'description',
-            content: 'Explore the best Node.js backend framwork including Express.js, Sequelize ORM, JWT authentication, BcryptJS, and Puppeteer. Build fast, secure, and scalable APIs.'
-        },
-        {
-            property: 'og:title',
-            content: 'Top Node.js Backend framework'
-        },
-        {
-            property: 'og:description',
-            content: 'Master the latest Node.js backend tools like Express, Sequelize, and JWT to build powerful APIs.'
-        },
-        // { property: 'og:image', content: post.image },
-        // { property: 'og:url', content: `https://yoursite.com/blog/${post.slug}` },
-    ],
-    // link: [
-    //   { rel: 'canonical', href: `https://yoursite.com/blog/${post.slug}` }
-    // ]
+  title: "Express Recharge Installation Guide - Setup Your Node.js Backend in Minutes",
+  meta: [
+    {
+      name: "author",
+      content: "Iftekher Mahmud <iftekhermahmud1@gmail.com>"
+    },
+    {
+      name: 'keywords',
+      content: 'Express Recharge installation, Node.js backend setup, Express.js CLI, backend framework, install express backend, sequelize setup, mysql2 integration, jwt backend install, multer file upload, dotenv setup, node.js starter project, express-recharge CLI, nodemon start, backend boilerplate, create express project'
+    },
+    {
+      name: 'description',
+      content: 'Learn how to install and configure Express Recharge, a modern Node.js backend framework. Includes Express CLI setup, Sequelize ORM, JWT, MySQL, file uploads, and more.'
+    },
+    {
+      property: 'og:title',
+      content: 'Install Express Recharge – Quick Start Node.js Backend Framework'
+    },
+    {
+      property: 'og:description',
+      content: 'Follow step-by-step instructions to install Express Recharge using npx. Quickly scaffold a Node.js backend with Sequelize, JWT, MySQL, and file upload support.'
+    },
+    {
+      property: 'og:type',
+      content: 'article'
+    },
+    // {
+    //   property: 'og:url',
+    //   content: 'https://yourdomain.com/docs/v1_0_0/installation' // Replace with actual URL
+    // },
+    // {
+    //   property: 'og:image',
+    //   content: 'https://yourdomain.com/images/express-recharge-install-og.jpg' // Replace with actual image
+    // },
+    {
+      name: 'twitter:card',
+      content: 'summary_large_image'
+    },
+    {
+      name: 'twitter:title',
+      content: 'Express Recharge Installation Guide - Setup Express.js Project Fast'
+    },
+    {
+      name: 'twitter:description',
+      content: 'Get started with Express Recharge. Install and configure a complete backend framework with Express.js 5, Sequelize, JWT, and more.'
+    },
+    // {
+    //   name: 'twitter:image',
+    //   content: 'https://yourdomain.com/images/express-recharge-install-og.jpg' // Replace with actual image
+    // }
+  ],
+//   link: [
+//     {
+//       rel: 'canonical',
+//       href: 'https://yourdomain.com/docs/v1_0_0/installation' // Replace with actual URL
+//     }
+//   ]
 })
 
 </script>
