@@ -122,12 +122,21 @@ useHead({
                 </p>
                 " />
 
-                // Example header to link to the icon image
+                <!-- // Example header to link to the icon image
                 app.use((req, res, next) => {
                 res.setHeader('X-Powered-By', 'MyAwesomeLib/1.0.0');
                 res.setHeader('X-Icon', '/static/icon.png'); // Link to local icon
                 next();
-                });
+                }); -->
+
+            </div>
+
+            <div class="col-span-1">
+                <CardView icon="fa-solid fa-user-tie" title="Authentication" content="
+                <p>
+                    Authentication and authorization are built-in systems that manage user identity and access control, ensuring only verified users can access specific resources based on defined roles and permissions.
+                </p>
+                " />
 
             </div>
 
