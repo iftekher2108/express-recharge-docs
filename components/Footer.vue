@@ -43,11 +43,11 @@ const date = new Date();
             <div class=" col-span-2">
                 <h3 class="text-3xl font-bold uppercase text-primary mb-3">Tools</h3>
                 <ul class="footer-menu flex flex-col gap-2 ">
-                    <p>Coming Soon</p>
-                    <!-- <li class="nav-link"><i class="fa-solid me-3 fa-arrow-right"></i>
-                        <NuxtLink to="/docs/v1_0_0/introduction">Introduction</NuxtLink>
-                    </li>
+                    <!-- <p>Coming Soon</p> -->
                     <li class="nav-link"><i class="fa-solid me-3 fa-arrow-right"></i>
+                        <NuxtLink to="/">Recharge CLI</NuxtLink>
+                    </li>
+                    <!-- <li class="nav-link"><i class="fa-solid me-3 fa-arrow-right"></i>
                         <NuxtLink to="/docs/v1_0_0/quick-start">Quick Start</NuxtLink>
                     </li> -->
                 </ul>

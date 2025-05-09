@@ -144,7 +144,7 @@ useHead({
             </div>
 
             <div class="col-span-1">
-                <CardView icon="fa-brands fa-font-awesome" title="Security" content="
+                <CardView icon="fa-solid fa-hashtag" title="Security" content="
                 <p>
                     Security features include server-side validation, authentication with Bcrypt, ORM for safe database interactions, CLI tools for secure operations, and RESTful API structure for controlled data access.
                 </p>

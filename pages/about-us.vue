@@ -71,7 +71,9 @@ useHead({
     <div class="grid lg:grid-cols-2 items-center justify-center gap-5">
       <div class="col-span-1">
         <h3 class="text-3xl mb-3 text-primary leading-1 font-bold uppercase">Iftekher Mahmud Pervez</h3>
-        <p class="mb-3">Computer Programmer | Software Engineer</p>
+        <p>Computer Programmer | Software Engineer</p>
+        <p class="mb-3">iftekhermahmud1[@]gmail.com</p>
+        
         <div class="social-icon flex items-center gap-2 mb-3">
           <NuxtLink href="https://www.facebook.com/mdiftekher.mahmud/" target="_blank"><i class="fa-brands fa-facebook-f"></i>
           </NuxtLink>

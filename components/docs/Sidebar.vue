@@ -13,27 +13,68 @@ const doc_v = "v1_0_0"
             <li>
                 <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/introduction`"><i
                         class="fa-solid fa-circle-info"></i>
-                        Introduction</NuxtLink>
+                    Introduction</NuxtLink>
             </li>
             <li>
                 <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/installation`"><i
                         class="fa-solid fa-play"></i>
-                        Installation</NuxtLink>
+                    Installation</NuxtLink>
             </li>
 
-            <li><NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/configration`">
-                <i class="fa-solid fa-sliders"></i> 
-                Configration</NuxtLink></li>
+            <li>
+                <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/configration`">
+                    <i class="fa-solid fa-sliders"></i>
+                    Configration
+                </NuxtLink>
+            </li>
 
             <li>
                 <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/quick-overview`"><i
                         class="fa-solid fa-hourglass-start"></i>
-                        Quick Overview</NuxtLink>
+                    Quick Overview</NuxtLink>
             </li>
 
-            <li><NuxtLink :to="`/docs/${doc_v}/modules`">
-                <i class="fa-solid fa-hexagon-nodes-bolt"></i>
-                 Modules</NuxtLink></li>
+            <li>
+                <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/modules`">
+                    <i class="fa-solid fa-hexagon-nodes-bolt"></i>
+                    Modules
+                </NuxtLink>
+            </li>
+
+            <li>
+                <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/routing`">
+                    <i class="fa-solid fa-route"></i>
+                    Routing
+                </NuxtLink>
+            </li>
+
+            <li>
+                <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/middleware`">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Middleware
+                </NuxtLink>
+            </li>
+
+            <li>
+                <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/database`">
+                    <i class="fa-solid fa-database"></i>
+                    Database
+                </NuxtLink>
+            </li>
+
+            <li>
+                <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/authentication`">
+                    <i class="fa-solid fa-database"></i>
+                    Authentication
+                </NuxtLink>
+            </li>
+
+            <li>
+                <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/security`">
+                    <i class="fa-solid fa-hashtag"></i>
+                    Security
+                </NuxtLink>
+            </li>
 
 
             <!-- <li>
