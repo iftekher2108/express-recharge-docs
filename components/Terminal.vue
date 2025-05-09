@@ -1,7 +1,12 @@
+<script setup>
+defineProps({
+  title:{ type:String, default:'Bash' }
+})
+</script>
 <template>
     <div class="bg-base-200 font-medium rounded-lg my-3 px-2 py-1">
             <div class="flex items-center justify-between">
-                <p class="text-base opacity-60">Bash</p>
+                <p class="text-base opacity-60">{{ title }}</p>
                 <div class="flex gap-2 items-center">
                   <button class="btn"><i class="fa-solid fa-minus"></i></button>
                   <button class="btn"><i class="fa-solid fa-expand"></i></button>

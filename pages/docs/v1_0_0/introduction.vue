@@ -70,7 +70,7 @@ useHead({
         <div class="breadcrumbs text-sm">
             <ul>
                 <li>home</li>
-                <li>Docs</li>
+                <li>docs</li>
                 <li>introduction</li>
             </ul>
         </div>

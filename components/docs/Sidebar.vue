@@ -1,4 +1,6 @@
 <script setup>
+import { NuxtLink } from '#components';
+
 const doc_v = "v1_0_0"
 
 </script>
@@ -10,18 +12,31 @@ const doc_v = "v1_0_0"
         <ul class="menu w-full rounded-box">
             <li>
                 <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/introduction`"><i
-                        class="fa-solid fa-circle-info"></i>Introduction</NuxtLink>
+                        class="fa-solid fa-circle-info"></i>
+                        Introduction</NuxtLink>
             </li>
             <li>
                 <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/installation`"><i
-                        class="fa-solid fa-play"></i>Installation</NuxtLink>
-            </li>
-            <li>
-                <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/quick-overview`"><i
-                        class="fa-solid fa-hourglass-start"></i>Quick Overview</NuxtLink>
+                        class="fa-solid fa-play"></i>
+                        Installation</NuxtLink>
             </li>
 
+            <li><NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/configration`">
+                <i class="fa-solid fa-sliders"></i> 
+                Configration</NuxtLink></li>
+
             <li>
+                <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/quick-overview`"><i
+                        class="fa-solid fa-hourglass-start"></i>
+                        Quick Overview</NuxtLink>
+            </li>
+
+            <li><NuxtLink :to="`/docs/${doc_v}/modules`">
+                <i class="fa-solid fa-hexagon-nodes-bolt"></i>
+                 Modules</NuxtLink></li>
+
+
+            <!-- <li>
                 <details>
                     <summary>Parent</summary>
                     <ul>
@@ -38,10 +53,9 @@ const doc_v = "v1_0_0"
                         </li>
                     </ul>
                 </details>
-            </li>
-            <li><a>Item 3</a></li>
-        </ul>
+            </li> -->
 
+        </ul>
     </div>
 </template>
 

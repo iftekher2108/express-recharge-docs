@@ -71,7 +71,7 @@ useHead({
         <div class="breadcrumbs text-sm">
             <ul>
                 <li>home</li>
-                <li>Docs</li>
+                <li>docs</li>
                 <li>quick-overview</li>
             </ul>
         </div>
@@ -92,8 +92,10 @@ useHead({
                 <p>
                     To generate a module-based content framework architecture in Express Recharge, create a scalable structure where each module follows a clear pattern for routes, controllers, Middleware, and models organization.
                 </p>
-                " />
-                <!-- :link="`/docs/${doc_v}/module`" -->
+                "
+                :link="`/docs/${doc_v}/modules`"
+                />
+                
 
             </div>
 
@@ -102,7 +104,9 @@ useHead({
                 <p>
                     Routing defines how an application’s endpoints respond to client requests, managing control flow and behavior using HTTP methods like GET, POST, PUT, and DELETE for efficient request processing.
                 </p>
-                " />
+                " 
+                link="/"
+                />
 
             </div>
 
@@ -111,7 +115,9 @@ useHead({
                 <p>
                     Middleware enables request handling logic like authentication, logging, and input validation, ensuring modular, reusable, and secure processing between the client request and server response.
                 </p>
-                " />
+                "
+                link="/"
+                />
 
             </div>
 
@@ -120,7 +126,9 @@ useHead({
                 <p>
                     Database integration offers seamless data management with ORM support, async/await, enabling easy queries, relationships, and dynamic migrations for efficient, secure, and scalable backend data operations.
                 </p>
-                " />
+                "
+                link="/"
+                />
 
             </div>
 
@@ -129,7 +137,9 @@ useHead({
                 <p>
                     Authentication and authorization are built-in systems that manage user identity and access control, ensuring only verified users can access specific resources based on defined roles and permissions.
                 </p>
-                " />
+                " 
+                link="/"
+                />
 
             </div>
 
@@ -138,7 +148,9 @@ useHead({
                 <p>
                     Security features include server-side validation, authentication with Bcrypt, ORM for safe database interactions, CLI tools for secure operations, and RESTful API structure for controlled data access.
                 </p>
-                " />
+                "
+                link="/"
+                />
 
             </div>
 
@@ -147,7 +159,9 @@ useHead({
                 <p>
                     Authentication and authorization are built-in systems that manage user identity and access control, ensuring only verified users can access specific resources based on defined roles and permissions.
                 </p>
-                " />
+                "
+                link="/"
+                />
 
                 <!-- // Example header to link to the icon image
                 app.use((req, res, next) => {
@@ -163,7 +177,9 @@ useHead({
                 <p>
                     Authentication and authorization are built-in systems that manage user identity and access control, ensuring only verified users can access specific resources based on defined roles and permissions.
                 </p>
-                " />
+                "
+                link="/"
+                />
 
             </div>
 

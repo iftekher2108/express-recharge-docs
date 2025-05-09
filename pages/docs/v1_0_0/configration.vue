@@ -68,15 +68,24 @@ useHead({
         <div class="breadcrumbs text-sm">
             <ul>
                 <li>home</li>
-                <li>Docs</li>
-                <li>installation</li>
+                <li>docs</li>
+                <li>configration</li>
             </ul>
         </div>
 
         <h1 class=" text-3xl font-bold mb-4">Configration of Express Recharge</h1>
 
         <p>
-            
+          Express recharge is configured with sensible defaults to make you productive.
+        </p>
+        <p>
+          <CodePreview 
+          endpoint="js"
+          code="var parvez = 'iftekher mahmud pervez';
+          function parvez() {
+          return 'iftkeher mahmud'
+          }"
+          />
         </p>
 
 
