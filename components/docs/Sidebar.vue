@@ -76,6 +76,20 @@ const doc_v = "v1_0_0"
                 </NuxtLink>
             </li>
 
+            <!-- <li>
+                <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/security`">
+                    <i class="fa-solid fa-hashtag"></i>
+                    Security
+                </NuxtLink>
+            </li> -->
+
+            <li>
+                <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/module-alies`">
+                    <i class="fa-solid fa-hashtag"></i>
+                    Module Alies
+                </NuxtLink>
+            </li>
+
 
             <!-- <li>
                 <details>

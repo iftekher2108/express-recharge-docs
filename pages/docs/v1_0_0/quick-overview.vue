@@ -105,7 +105,7 @@ useHead({
                     Routing defines how an application’s endpoints respond to client requests, managing control flow and behavior using HTTP methods like GET, POST, PUT, and DELETE for efficient request processing.
                 </p>
                 " 
-                link="/"
+                :link="`/docs/${doc_v}/routing`"
                 />
 
             </div>
@@ -116,7 +116,7 @@ useHead({
                     Middleware enables request handling logic like authentication, logging, and input validation, ensuring modular, reusable, and secure processing between the client request and server response.
                 </p>
                 "
-                link="/"
+                :link="`/docs/${doc_v}/middleware`"
                 />
 
             </div>
@@ -127,7 +127,7 @@ useHead({
                     Database integration offers seamless data management with ORM support, async/await, enabling easy queries, relationships, and dynamic migrations for efficient, secure, and scalable backend data operations.
                 </p>
                 "
-                link="/"
+                :link="`/docs/${doc_v}/database`"
                 />
 
             </div>
@@ -138,7 +138,7 @@ useHead({
                     Authentication and authorization are built-in systems that manage user identity and access control, ensuring only verified users can access specific resources based on defined roles and permissions.
                 </p>
                 " 
-                link="/"
+                :link="`/docs/${doc_v}/authentication`"
                 />
 
             </div>
@@ -149,18 +149,18 @@ useHead({
                     Security features include server-side validation, authentication with Bcrypt, ORM for safe database interactions, CLI tools for secure operations, and RESTful API structure for controlled data access.
                 </p>
                 "
-                link="/"
+                :link="`/docs/${doc_v}/security`"
                 />
 
             </div>
 
             <div class="col-span-1">
-                <CardView icon="fa-solid fa-user-tie" title="Authentication" content="
+                <CardView icon="fa-solid fa-user-tie" title="Module Alies" content="
                 <p>
-                    Authentication and authorization are built-in systems that manage user identity and access control, ensuring only verified users can access specific resources based on defined roles and permissions.
+                    A module alias simplifies import paths in your project by creating shortcuts, making code cleaner, easier to read, and reducing long relative paths like ../../../ in large codebases.
                 </p>
                 "
-                link="/"
+                :link="`/docs/${doc_v}/module-alies`"
                 />
 
                 <!-- // Example header to link to the icon image
