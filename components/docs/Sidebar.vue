@@ -133,6 +133,11 @@ const doc_v = "v1_0_0"
         summary {
             padding: 12px;
             margin-bottom: 5px;
+            transition: all 0.1s ease-in-out;
+
+            &:active {
+                transform: translateY(2px) scale(1.01);
+            }
 
             i {
                 transition: all 0.3s ease-in-out;
