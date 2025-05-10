@@ -42,18 +42,41 @@ const doc_v = "v1_0_0"
             </li>
 
             <li>
-                <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/routing`">
-                    <i class="fa-solid fa-route"></i>
-                    Routing
-                </NuxtLink>
+                <details>
+                    <summary><i class="fa-solid fa-cloud-bolt"></i> Basics</summary>
+                    <ul>
+                        <li>
+                            <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/basics/routing`">
+                                <i class="fa-solid fa-route"></i>
+                                Routing
+                            </NuxtLink>
+                        </li>
+
+                        <li>
+                            <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/basics/middleware`">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                Middleware
+                            </NuxtLink>
+                        </li>
+
+                        <li>
+                            <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/basics/module-alies`">
+                                <i class="fa-solid fa-hashtag"></i>
+                                Module Alies
+                            </NuxtLink>
+                        </li>
+
+                        <!-- <li>
+                            <NuxtLink to="">Submenu 1</NuxtLink>
+                        </li>
+                        <li>
+                            <NuxtLink to="">Submenu 2</NuxtLink>
+                        </li> -->
+
+                    </ul>
+                </details>
             </li>
 
-            <li>
-                <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/middleware`">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    Middleware
-                </NuxtLink>
-            </li>
 
             <li>
                 <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/database`">
@@ -83,22 +106,26 @@ const doc_v = "v1_0_0"
                 </NuxtLink>
             </li> -->
 
-            <li>
-                <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/module-alies`">
-                    <i class="fa-solid fa-hashtag"></i>
-                    Module Alies
-                </NuxtLink>
-            </li>
+
 
 
             <li>
                 <details>
                     <summary><i class="fa-solid fa-rocket"></i> Utilities</summary>
                     <ul>
-                        <li><NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/utilities/file-system`"><i class="fa-regular fa-file-powerpoint"></i> File System</NuxtLink></li>
+                        <li>
+                            <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/utilities/file-system`"><i
+                                    class="fa-regular fa-file-powerpoint"></i> File System</NuxtLink>
+                        </li>
                         <!-- <li><NuxtLink to="">Submenu 2</NuxtLink></li> -->
-                        <li><NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/utilities/html-to-pdf`"><i class="fa-solid fa-file-code"></i> Html to pdf</NuxtLink></li>
-                        <li><NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/utilities/jwt`"><i class="fa-solid fa-square-binary"></i> JWT</NuxtLink></li>
+                        <li>
+                            <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/utilities/html-to-pdf`"><i
+                                    class="fa-solid fa-file-code"></i> Html to pdf</NuxtLink>
+                        </li>
+                        <li>
+                            <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/utilities/jwt`"><i
+                                    class="fa-solid fa-square-binary"></i> JWT</NuxtLink>
+                        </li>
                         <!-- <li>
                             <details open>
                                 <summary>Parent</summary>

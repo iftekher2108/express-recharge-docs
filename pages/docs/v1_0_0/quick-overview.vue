@@ -102,7 +102,7 @@ useHead({
                 <p>
                     Routing defines how an application’s endpoints respond to client requests, managing control flow and behavior using HTTP methods like GET, POST, PUT, and DELETE for efficient request processing.
                 </p>
-                " :link="`/docs/${doc_v}/routing`" />
+                " :link="`/docs/${doc_v}/basics/routing`" />
 
             </div>
 
@@ -111,7 +111,7 @@ useHead({
                 <p>
                     Middleware enables request handling logic like authentication, logging, and input validation, ensuring modular, reusable, and secure processing between the client request and server response.
                 </p>
-                " :link="`/docs/${doc_v}/middleware`" />
+                " :link="`/docs/${doc_v}/basics/middleware`" />
 
             </div>
 
@@ -147,7 +147,7 @@ useHead({
                 <p>
                     A module alias simplifies import paths in your project by creating shortcuts, making code cleaner, easier to read, and reducing long relative paths like ../../../ in large codebases.
                 </p>
-                " :link="`/docs/${doc_v}/module-alies`" />
+                " :link="`/docs/${doc_v}/basics/module-alies`" />
 
                 <!-- // Example header to link to the icon image
                 app.use((req, res, next) => {
@@ -163,13 +163,17 @@ useHead({
                 <p>
                     This utilities folder includes essential tools: file handling, grouped routes, HTML-to-PDF conversion, and JWT authentication—making your backend development more modular, secure, and maintainable.
                 </p>
-                " 
-                :link="`/docs/${doc_v}/utilities/file-system`" />
+                " :link="`/docs/${doc_v}/utilities/file-system`" />
 
             </div>
 
 
+        </div>
 
+        <div class="flex my-4 justify-between p-4">
+            <NuxtLink :to="`/docs/${doc_v}/configration`" class="btn md:px-8 py-5 btn-primary">Configration</NuxtLink>
+            <NuxtLink :to="`/docs/${doc_v}/modules`" class="btn md:px-8 py-5 btn-primary">Modules
+            </NuxtLink>
         </div>
 
     </div>

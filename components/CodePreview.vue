@@ -30,7 +30,7 @@ const copyCode = () => {
 
 <template>
     <div class="relative bg-[#0d1117] text-white border border-primary/40 rounded-lg overflow-x-auto">
-        <div class="flex justify-between p-2 px-4 bg-primary/15 items-center mb-2">
+        <div class="flex justify-between p-2 px-4 bg-primary/15 items-center">
             <span class="text-base font-bold font-mono">{{ endpoint }}</span>
             <div v-if="copy == true" class="space-x-2">
                 <button @click="copyCode" class="btn btn-primary btn-outline text-gray-300 hover:text-white">📋 {{
