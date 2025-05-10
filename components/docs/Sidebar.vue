@@ -91,13 +91,15 @@ const doc_v = "v1_0_0"
             </li>
 
 
-            <!-- <li>
+            <li>
                 <details>
-                    <summary>Parent</summary>
+                    <summary><i class="fa-solid fa-rocket"></i> Utilities</summary>
                     <ul>
-                        <li><a>Submenu 1</a></li>
-                        <li><a>Submenu 2</a></li>
-                        <li>
+                        <li><NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/utilities/file-system`"><i class="fa-regular fa-file-powerpoint"></i> File System</NuxtLink></li>
+                        <!-- <li><NuxtLink to="">Submenu 2</NuxtLink></li> -->
+                        <li><NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/utilities/html-to-pdf`"><i class="fa-solid fa-file-code"></i> Html to pdf</NuxtLink></li>
+                        <li><NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/utilities/jwt`"><i class="fa-solid fa-square-binary"></i> JWT</NuxtLink></li>
+                        <!-- <li>
                             <details open>
                                 <summary>Parent</summary>
                                 <ul>
@@ -105,10 +107,10 @@ const doc_v = "v1_0_0"
                                     <li><a>Submenu 2</a></li>
                                 </ul>
                             </details>
-                        </li>
+                        </li> -->
                     </ul>
                 </details>
-            </li> -->
+            </li>
 
         </ul>
     </div>

@@ -9,7 +9,7 @@ defineProps({
 <template>
     <div>
         <NuxtLink :to="link">
-            <div class="card glass bg-base-100 hover:border-2 hover:border-primary/60 lg:min-h-70 min-h-60 hover:bg-primary/30 transition-all duration-300 ease-in-out shadow-xl">
+            <div class="card glass bg-base-100 hover:border-2 hover:border-primary/60 lg:min-h-[20rem] min-h-60 hover:bg-primary/30 transition-all duration-300 ease-in-out shadow-xl">
                 <div class="card-body p-3">
                     <i :class="icon"></i>
                     <h1 class="card-title text-lg text-center mt-2 uppercase text-primary justify-center">{{ title }}</h1>

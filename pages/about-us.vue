@@ -91,8 +91,8 @@ useHead({
         </p>
         <p>
           I specialize in Full-Stack Development, including front-end technologies like HTML, CSS, scss, Bootstrap, tailwind, JavaScript, jquery and
-          frameworks like React, Vue, Next.js and Nuxt.js, along with back-end solutions using Laravel, PHP, and MySQL. I also
-          have a strong background in mobile development with Flutter and Kotlin.
+          frameworks like React, Vue, Next.js and Nuxt.js, along with back-end solutions using Laravel, PHP, Node JS. I also
+          have a strong background in mobile development with Flutter.
         </p>
         <p>
           My goal is to create seamless and impactful user experiences through clean, maintainable code and cutting-edge

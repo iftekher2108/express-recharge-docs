@@ -6,63 +6,63 @@ definePageMeta({
 })
 
 useHead({
-  title: "Quick Overview - Express Recharge Node.js Backend Framework Features",
-  meta: [
-    {
-      name: "author",
-      content: "Iftekher Mahmud <iftekhermahmud1@gmail.com>"
-    },
-    {
-      name: 'keywords',
-      content: 'express recharge features, node.js backend overview, express.js modular structure, sequelize orm overview, express routing, node.js middleware, mysql2 integration, jwt authentication, backend architecture, secure node.js apps, express recharge quick overview, module based node framework'
-    },
-    {
-      name: 'description',
-      content: 'Get a quick overview of Express Recharge - a powerful Node.js backend framework with built-in modules, routing, middleware, database integration, JWT authentication, and scalable architecture.'
-    },
-    {
-      property: 'og:title',
-      content: 'Quick Overview - Features of Express Recharge Node.js Backend Framework'
-    },
-    {
-      property: 'og:description',
-      content: 'Explore the modular architecture, built-in authentication, ORM integration, middleware layers, and security features of Express Recharge.'
-    },
-    {
-      property: 'og:type',
-      content: 'article'
-    },
-    // {
-    //   property: 'og:url',
-    //   content: 'https://yourdomain.com/docs/v1_0_0/quick-overview' // Replace with actual URL
-    // },
-    // {
-    //   property: 'og:image',
-    //   content: 'https://yourdomain.com/images/express-recharge-overview-og.jpg' // Replace with your image
-    // },
-    {
-      name: 'twitter:card',
-      content: 'summary_large_image'
-    },
-    {
-      name: 'twitter:title',
-      content: 'Quick Overview - Node.js Backend Features with Express Recharge'
-    },
-    {
-      name: 'twitter:description',
-      content: 'Take a quick tour of the powerful features included in Express Recharge: modules, routing, middleware, database ORM, security, and more.'
-    },
-    // {
-    //   name: 'twitter:image',
-    //   content: 'https://yourdomain.com/images/express-recharge-overview-og.jpg' // Replace with your image
-    // }
-  ],
-//   link: [
-//     {
-//       rel: 'canonical',
-//       href: 'https://yourdomain.com/docs/v1_0_0/quick-overview' // Replace with actual URL
-//     }
-//   ]
+    title: "Quick Overview - Express Recharge Node.js Backend Framework Features",
+    meta: [
+        {
+            name: "author",
+            content: "Iftekher Mahmud <iftekhermahmud1@gmail.com>"
+        },
+        {
+            name: 'keywords',
+            content: 'express recharge features, node.js backend overview, express.js modular structure, sequelize orm overview, express routing, node.js middleware, mysql2 integration, jwt authentication, backend architecture, secure node.js apps, express recharge quick overview, module based node framework'
+        },
+        {
+            name: 'description',
+            content: 'Get a quick overview of Express Recharge - a powerful Node.js backend framework with built-in modules, routing, middleware, database integration, JWT authentication, and scalable architecture.'
+        },
+        {
+            property: 'og:title',
+            content: 'Quick Overview - Features of Express Recharge Node.js Backend Framework'
+        },
+        {
+            property: 'og:description',
+            content: 'Explore the modular architecture, built-in authentication, ORM integration, middleware layers, and security features of Express Recharge.'
+        },
+        {
+            property: 'og:type',
+            content: 'article'
+        },
+        // {
+        //   property: 'og:url',
+        //   content: 'https://yourdomain.com/docs/v1_0_0/quick-overview' // Replace with actual URL
+        // },
+        // {
+        //   property: 'og:image',
+        //   content: 'https://yourdomain.com/images/express-recharge-overview-og.jpg' // Replace with your image
+        // },
+        {
+            name: 'twitter:card',
+            content: 'summary_large_image'
+        },
+        {
+            name: 'twitter:title',
+            content: 'Quick Overview - Node.js Backend Features with Express Recharge'
+        },
+        {
+            name: 'twitter:description',
+            content: 'Take a quick tour of the powerful features included in Express Recharge: modules, routing, middleware, database ORM, security, and more.'
+        },
+        // {
+        //   name: 'twitter:image',
+        //   content: 'https://yourdomain.com/images/express-recharge-overview-og.jpg' // Replace with your image
+        // }
+    ],
+    //   link: [
+    //     {
+    //       rel: 'canonical',
+    //       href: 'https://yourdomain.com/docs/v1_0_0/quick-overview' // Replace with actual URL
+    //     }
+    //   ]
 })
 
 </script>
@@ -92,10 +92,8 @@ useHead({
                 <p>
                     To generate a module-based content framework architecture in Express Recharge, create a scalable structure where each module follows a clear pattern for routes, controllers, Middleware, and models organization.
                 </p>
-                "
-                :link="`/docs/${doc_v}/modules`"
-                />
-                
+                " :link="`/docs/${doc_v}/modules`" />
+
 
             </div>
 
@@ -104,9 +102,7 @@ useHead({
                 <p>
                     Routing defines how an application’s endpoints respond to client requests, managing control flow and behavior using HTTP methods like GET, POST, PUT, and DELETE for efficient request processing.
                 </p>
-                " 
-                :link="`/docs/${doc_v}/routing`"
-                />
+                " :link="`/docs/${doc_v}/routing`" />
 
             </div>
 
@@ -115,9 +111,7 @@ useHead({
                 <p>
                     Middleware enables request handling logic like authentication, logging, and input validation, ensuring modular, reusable, and secure processing between the client request and server response.
                 </p>
-                "
-                :link="`/docs/${doc_v}/middleware`"
-                />
+                " :link="`/docs/${doc_v}/middleware`" />
 
             </div>
 
@@ -126,9 +120,7 @@ useHead({
                 <p>
                     Database integration offers seamless data management with ORM support, async/await, enabling easy queries, relationships, and dynamic migrations for efficient, secure, and scalable backend data operations.
                 </p>
-                "
-                :link="`/docs/${doc_v}/database`"
-                />
+                " :link="`/docs/${doc_v}/database`" />
 
             </div>
 
@@ -137,9 +129,7 @@ useHead({
                 <p>
                     Authentication and authorization are built-in systems that manage user identity and access control, ensuring only verified users can access specific resources based on defined roles and permissions.
                 </p>
-                " 
-                :link="`/docs/${doc_v}/authentication`"
-                />
+                " :link="`/docs/${doc_v}/authentication`" />
 
             </div>
 
@@ -148,9 +138,7 @@ useHead({
                 <p>
                     Security features include server-side validation, authentication with Bcrypt, ORM for safe database interactions, CLI tools for secure operations, and RESTful API structure for controlled data access.
                 </p>
-                "
-                :link="`/docs/${doc_v}/security`"
-                />
+                " :link="`/docs/${doc_v}/security`" />
 
             </div>
 
@@ -159,9 +147,7 @@ useHead({
                 <p>
                     A module alias simplifies import paths in your project by creating shortcuts, making code cleaner, easier to read, and reducing long relative paths like ../../../ in large codebases.
                 </p>
-                "
-                :link="`/docs/${doc_v}/module-alies`"
-                />
+                " :link="`/docs/${doc_v}/module-alies`" />
 
                 <!-- // Example header to link to the icon image
                 app.use((req, res, next) => {
@@ -173,13 +159,12 @@ useHead({
             </div>
 
             <div class="col-span-1">
-                <CardView icon="fa-solid fa-user-tie" title="Authentication" content="
+                <CardView icon="fa-solid fa-user-tie" title="Utilities" content="
                 <p>
-                    Authentication and authorization are built-in systems that manage user identity and access control, ensuring only verified users can access specific resources based on defined roles and permissions.
+                    This utilities folder includes essential tools: file handling, grouped routes, HTML-to-PDF conversion, and JWT authentication—making your backend development more modular, secure, and maintainable.
                 </p>
-                "
-                link="/"
-                />
+                " 
+                :link="`/docs/${doc_v}/utilities/file-system`" />
 
             </div>
 
