@@ -60,13 +60,104 @@ module.exports = router;
 
         <h5 class="text-base my-3">In the example above:</h5>
 
-       <li><span class="p-1 rounded bg-primary/20">GET /users</span> returns a list of users.</li>
-       <li><span class="p-1 rounded bg-primary/20">POST /users</span> handles user creation.</li>
+        <li><span class="p-1 rounded bg-primary/20">GET /users</span> returns a list of users.</li>
+        <li><span class="p-1 rounded bg-primary/20">POST /users</span> handles user creation.</li>
+
+
+        <h5 class="text-base mb-3">You can then import this route in your main app.js:</h5>
+
+        <p>
+            <CodePreview endpoint="app.js" code="const userRoute = require('./routes/userRoutes');
+app.use('/', userRoute);
+" />
+        </p>
+
+        <br>
+
+        <h5 class="text-base">📁 Folder-Based Routing in Modular Projects</h5>
+
+
+        <p>
+            In Express Recharge, routes are defined inside each module, under Modules/{ModuleName}/routes/routes.js.
+        </p>
+
+        <p class="mb-3">
+            Example project structure:
+        </p>
+
+        <p>
+            <CodePreview copy="false" endpoint="app.js" code="Modules/
+  └── Users/
+      ├── controllers/
+          └── UserController.js
+      ├── routes/
+          └── routes.js
+" />
+        </p>
+
+
+        <h5 class="text-base my-3">Step 1: Define Controller Logic</h5>
+
+        <p>
+            <CodePreview endpoint="Modules/Users/controllers/UserController.js" code="
+exports.getUsers = (req, res) => {
+  res.json([{ id: 1, name: 'John Doe' }]);
+};
+
+exports.createUser = (req, res) => {
+  const { name } = req.body;
+  res.status(201).json({ message: `User ${name} created.` });
+};
+" />
+        </p>
+
+
+        <h5 class="text-base my-3">Step 2: Connect Routes</h5>
+
+        <p>
+            <CodePreview endpoint="Modules/Users/routes/routes.js" code="const express = require('express');
+const router = express.Router();
+const UserController = require('@modules/Users/controllers/UserController');
+
+// GET users
+router.get('/users', UserController.getUsers);
+
+// POST create user
+router.post('/users', UserController.createUser);
+
+module.exports = router;
+" />
+        </p>
+
+        <h5 class="text-base my-3">Step 3: Register in app.js</h5>
+
+        <p>
+            <CodePreview endpoint="app.js" code="const express = require('express');
+const app = express();
+
+app.use(express.json()); // for parsing application/json
+
+const userRoute = require('@modules/Users/routes/routes');
+app.use('/', userRoute);
+
+" />
+        </p>
+
+        <h5 class="text-base my-3">✨ Advanced Routing Tips</h5>
+
+        <li>Use middleware in routes to add validation, authentication, or logging.</li>
+        <li>Group routes using express.Router() for each module.</li>
+        <li>Prefix routes using app.use('/api/users', userRoutes) to scope endpoints.</li>
+        <li>Use async/await with try/catch in controllers for better error handling.</li>
 
 
 
-
-
+        <div class="flex my-4 justify-between p-4">
+            <NuxtLink :to="`/docs/${doc_v}/modules`" class="btn md:px-8 py-5 btn-primary">Modules
+            </NuxtLink>
+            <NuxtLink :to="`/docs/${doc_v}/basics/middleware`" class="btn md:px-8 py-5 btn-primary">Middleware
+            </NuxtLink>
+        </div>
 
 
     </div>
