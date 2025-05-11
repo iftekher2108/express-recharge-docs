@@ -120,7 +120,7 @@ useHead({
 
             <h5 class="text-base">Step 2: Register Routes in app.js</h5>
 
-            <p>
+            <p class="mb-3">
                   To make your module functional, import its routes in the main app.js file and register them using
                   Express middleware.
             </p>
@@ -139,11 +139,10 @@ app.use("/",userRoute);       // register the module route here
                   This enables Express to handle requests defined inside your module’s routes.js.
             </p>
 
-            <br>
 
-            <p class="my-3">
+            <h3 class="text-base my-3">
                   this is full of simple app.js
-            </p>
+            </h3>
 
             <p>
                   <CodePreview copy="false" endpoint="app.js" code='const express = require("express");

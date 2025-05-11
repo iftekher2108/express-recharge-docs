@@ -1,4 +1,5 @@
 <script setup>
+const doc_v = "v1_0_0"
 definePageMeta({
     layout: 'docs'
 })

@@ -37,7 +37,7 @@ definePageMeta({
         </p>
 
 
-        <h5 class="text-base">🔗 Basic Route Example</h5>
+        <h5 class="text-base mb-3">🔗 Basic Route Example</h5>
 
         <p>
             <CodePreview endpoint="Modules/Users/routes/routes.js" code="const express = require('express');
