@@ -1,39 +1,41 @@
 <script setup>
+const doc_v = "v1_0"
 definePageMeta({
-    layout: 'docs'
+  layout: 'docs'
 })
 </script>
 <template>
-    <div>
+  <div>
 
-        <div class="breadcrumbs text-sm">
-            <ul>
-                <li>home</li>
-                <li>docs</li>
-                <li>configration</li>
-            </ul>
-        </div>
+    <div class="breadcrumbs text-sm">
+      <ul>
+        <li>home</li>
+        <li>docs</li>
+        <li>database</li>
+        <li>configration</li>
+      </ul>
+    </div>
 
-        <h1 class=" text-3xl font-bold mb-4">Model Basics of Express Recharge</h1>
+    <h1 class=" text-3xl font-bold mb-4">Model Basics of Express Recharge</h1>
 
-        <p>
-            Models define the structure of your data, including the columns, their data types, and any constraints or
-            configurations
-        </p>
+    <p>
+      Models define the structure of your data, including the columns, their data types, and any constraints or
+      configurations
+    </p>
 
-        <h5 class="text-base my-3">Defining a Model</h5>
+    <h5 class="text-base my-3">Defining a Model</h5>
 
-        <p>
-            You can define a model in Sequelize in two primary ways:
-        </p>
+    <p>
+      You can define a model in Sequelize in two primary ways:
+    </p>
 
-        <p class="mb-3">
-            Using sequelize.define(): This is the traditional method where you call the define method on your Sequelize
-            instance.
-        </p>
+    <p class="mb-3">
+      Using sequelize.define(): This is the traditional method where you call the define method on your Sequelize
+      instance.
+    </p>
 
-        <p>
-            <CodePreview endpoint="Modules/Users/models/user.js" code='const { DataTypes, TableHints } = require("sequelize");
+    <p>
+      <CodePreview endpoint="Modules/Users/models/user.js" code='const { DataTypes, TableHints } = require("sequelize");
 const db = require("@config/database");
 
 const User = db.define(
@@ -90,33 +92,316 @@ const User = db.define(
 module.exports = User;
 
 ' />
-        </p>
+    </p>
 
 
 
 
-        <h5 class="text-base my-3">Model Name and Table Name</h5>
+    <h5 class="text-base my-3">Model Name and Table Name</h5>
 
-        <li>Model Name: This is the name you use in your JavaScript code to refer to the model (e.g., User, Product).
-            It's typically singular and PascalCase.</li>
-        <li>Table Name: This is the actual name of the table in your database (e.g., users, products). Sequelize can
-            automatically pluralize your model name to determine the table name (e.g., User becomes users), but you can
-            configure this behavior using the tableName option.</li>
+    <li>Model Name: This is the name you use in your JavaScript code to refer to the model (e.g., User, Product).
+      It's typically singular and PascalCase.</li>
+    <li>Table Name: This is the actual name of the table in your database (e.g., users, products). Sequelize can
+      automatically pluralize your model name to determine the table name (e.g., User becomes users), but you can
+      configure this behavior using the tableName option.</li>
 
 
-        <hr class=" my-5 opacity-30">
+    <hr class=" my-5 opacity-30">
 
-        <h5 class="text-base">Enforcing the table name to be equal to the model name</h5>
-        <p>
-            You can stop the auto-pluralization performed by Sequelize using the <span
-                class="bg-primary/20 p-1 rounded">freezeTableName: true</span> option. This way,
-            Sequelize will infer the table name to be equal to the model name, without any modifications:
-        </p>
+    <h5 class="text-base">Enforcing the table name to be equal to the model name</h5>
+    <p class="mb-3">
+      You can stop the auto-pluralization performed by Sequelize using the <span
+        class="bg-primary/20 p-1 rounded">freezeTableName: true</span> option. This way,
+      Sequelize will infer the table name to be equal to the model name, without any modifications:
+    </p>
 
-        <p>
-            <CodePreview endpoint="Modules/Users/models/user.js" code='
+    <p>
+      <CodePreview endpoint="Modules/Users/models/user.js" code="sequelize.define(
+  'User',
+  {
+    // ... (attributes)
+  },
+  {
+    freezeTableName: true,
+  },
+);
+" />
+    </p>
+
+    <p class="my-3">
+      The example above will create a model named User pointing to a table also named User.
+    </p>
+
+    <h4 class="text-base">Model synchronization</h4>
+
+    <p>
+      When you define a model, you're telling Sequelize a few things about its table in the database. However, what if
+      the table actually doesn't even exist in the database? What if it exists, but it has different columns, less
+      columns, or any other difference?
+    </p>
+
+    <li> <span class="bg-primary/20 rounded p-1">User.sync()</span> - This creates the table if it doesn't exist (and
+      does
+      nothing if it already exists)</li>
+    <li> <span class="bg-primary/20 rounded p-1">User.sync({ force: true })</span> - This creates the table, dropping it
+      first if it already existed</li>
+    <li> <span class="bg-primary/20 rounded p-1">User.sync({ alter: true })</span> - This checks what is the current
+      state
+      of the table in the database (which columns
+      it
+      has, what are their data types, etc), and then performs the necessary changes in the table to make it match the
+      model.</li>
+
+    <br>
+
+    <p>
+
+      <CodePreview endpoint="Modules/Users/models/user.js" code='const { DataTypes, TableHints } = require("sequelize");
+const db = require("@config/database");
+
+const User = db.define(
+  "user",
+  {
+    // model field data 
+  },
+  {
+    paranoid: true, // this is for createAt, updateAt and deleteAt
+  }
+);
+
+// This creates the table if it doesnt exist
+// (and does nothing if it already exists)
+User.sync()
+  .then(() => {
+    console.log("User Model init successfully!");
+  })
+  .catch((err) => {
+    console.error("User sync failed:", err);
+  });
+
+  // ====================================================================
+
+//  This checks what is the current state of the table in the database
+// (which columns it has, what are their data types), and then
+// performs the necessary changes in the table to make it match the model.
+// User.sync({ alter: true }).then(() => {
+//     console.log("User model altered successfully!")
+// }) .catch((err) => {
+//     console.error("User sync failed:", err);
+// });
+
+// =========================================================================
+
+// This creates the table, dropping it first if it already existed
+// User.sync({ force: true })
+//   .then(() => {
+//     console.log("User model force-fully Created successfully!");
+//   })
+//   .catch((err) => {
+//     console.error("User sync failed:", err);
+//   });
+
+// ===========================================================================
+
+// // User model table drop with all Data (if you want to ?)
+// User.drop().then(() => {
+//     console.log("User model dropped!")
+// }) .catch((err) => {
+//     console.error("User sync failed:", err);
+// });
+
+module.exports = User;
 ' />
-        </p>
 
+    </p>
+
+    <br>
+
+    <h5 class="text-base">Timestamps</h5>
+
+    <p>
+      By default, Sequelize automatically adds the fields createdAt and updatedAt to every model, using the data type
+      DataTypes.DATE. Those fields are automatically managed as well - whenever you use Sequelize to create or update
+      something, those fields will be set correctly. The createdAt field will contain the timestamp representing the
+      moment of creation, and the updatedAt will contain the timestamp of the latest update.
+    </p>
+
+    <p class="mb-3">
+      This behavior can be disabled for a model with the timestamps: false option:
+    </p>
+
+    <p>
+      <CodePreview endpoint="Modules/Users/models/user.js" code="sequelize.define(
+  'User',
+  {
+    // ... (attributes)
+  },
+  {
+    timestamps: false,
+  },
+);
+" />
+    </p>
+
+    <p class="my-3">
+      It is also possible to enable only one of createdAt/updatedAt, and to provide a custom name for these columns:
+    </p>
+
+    <p>
+      <CodePreview endpoint="Modules/Users/models/user.js" code="sequelize.define(
+  'User',
+  {
+    // ... (attributes)
+  },
+  {
+    
+    // don't forget to enable timestamps!
+    timestamps: true,
+
+    // I don't want createdAt
+    createdAt: false,
+
+    // I want updatedAt to actually be called updateTimestamp
+    updatedAt: 'updateTimestamp',
+  },
+);
+" />
+    </p>
+
+    <h5 class="text-base my-3">Column declaration</h5>
+
+    <p>
+      <CodePreview endpoint="Modules/Users/models/user.js" code="const sequelize = require('@config/database');
+      
+      sequelize.define(
+  'User',
+  {
+     name: {
+      type: DataTypes.STRING,
+    },
+  }
+);
+" />
+    </p>
+
+    <h5 class="text-base my-3">Data Types</h5>
+
+
+
+
+
+    <p class="mb-3">
+      Every column you define in your model must have a data type. Sequelize provides a lot of <NuxtLink
+        class="text-primary hover:underline" target="_blank"
+        to="https://github.com/sequelize/sequelize/blob/v6/src/data-types.js">built-in data types</NuxtLink>. To access
+      a built-in data type, you must import DataTypes:
+    </p>
+
+    <p>
+      <CodePreview endpoint="Modules/Users/models/user.js" code="const { DataTypes } = require('sequelize'); // Import the built-in data types
+" />
+    </p>
+
+    <h3 class="text-sm my-3">Strings</h3>
+
+    <p>
+      <CodePreview endpoint="Modules/Users/models/user.js" code="DataTypes.STRING; // VARCHAR(255)
+DataTypes.STRING(1234); // VARCHAR(1234)
+DataTypes.STRING.BINARY; // VARCHAR BINARY
+DataTypes.TEXT; // TEXT
+DataTypes.TEXT('tiny'); // TINYTEXT
+DataTypes.CITEXT; // CITEXT          PostgreSQL and SQLite only.
+DataTypes.TSVECTOR; // TSVECTOR        PostgreSQL only.
+" />
+    </p>
+
+    <h3 class="text-sm my-3">Boolean</h3>
+
+    <p>
+      <CodePreview endpoint="Modules/Users/models/user.js" code="DataTypes.BOOLEAN; // TINYINT(1)
+" />
+    </p>
+
+
+    <h3 class="text-sm my-3">Numbers</h3>
+
+    <p>
+      <CodePreview endpoint="Modules/Users/models/user.js" code="DataTypes.INTEGER; // INTEGER
+DataTypes.BIGINT; // BIGINT
+DataTypes.BIGINT(11); // BIGINT(11)
+
+DataTypes.FLOAT; // FLOAT
+DataTypes.FLOAT(11); // FLOAT(11)
+DataTypes.FLOAT(11, 10); // FLOAT(11,10)
+
+DataTypes.REAL; // REAL            PostgreSQL only.
+DataTypes.REAL(11); // REAL(11)        PostgreSQL only.
+DataTypes.REAL(11, 12); // REAL(11,12)     PostgreSQL only.
+
+DataTypes.DOUBLE; // DOUBLE
+DataTypes.DOUBLE(11); // DOUBLE(11)
+DataTypes.DOUBLE(11, 10); // DOUBLE(11,10)
+
+DataTypes.DECIMAL; // DECIMAL
+DataTypes.DECIMAL(10, 2); // DECIMAL(10,2)
+" />
+    </p>
+
+    <h3 class="text-sm my-3">Unsigned & Zerofill integers - MySQL/MariaDB only</h3>
+
+    <p class="mb-3">
+      In MySQL and MariaDB, the data types INTEGER, BIGINT, FLOAT and DOUBLE can be set as unsigned or zerofill (or
+      both), as follows:
+    </p>
+
+    <p>
+      <CodePreview endpoint="Modules/Users/models/user.js" code="DataTypes.INTEGER.UNSIGNED;
+DataTypes.INTEGER.ZEROFILL;
+DataTypes.INTEGER.UNSIGNED.ZEROFILL;
+// You can also specify the size i.e. INTEGER(10) instead of simply INTEGER
+// Same for BIGINT, FLOAT and DOUBLE
+" />
+    </p>
+
+    <h3 class="text-sm my-3">Dates</h3>
+
+    <p>
+      <CodePreview endpoint="Modules/Users/models/user.js" code="DataTypes.DATE; // DATETIME for mysql / sqlite, TIMESTAMP WITH TIME ZONE for postgres
+DataTypes.DATE(6); // DATETIME(6) for mysql 5.6.4+. Fractional seconds support with up to 6 digits of precision
+DataTypes.DATEONLY; // DATE without time
+" />
+    </p>
+
+    <h3 class="text-sm my-3">UUIDs</h3>
+
+    <p class="mb-3">
+      For UUIDs, use DataTypes.UUID. It becomes the UUID data type for PostgreSQL and SQLite, and CHAR(36) for MySQL.
+      Sequelize can generate UUIDs automatically for these fields, simply use DataTypes.UUIDV1 or DataTypes.UUIDV4 as
+      the default value:
+    </p>
+
+    <p>
+      <CodePreview endpoint="Modules/Users/models/user.js" code="{
+  type: DataTypes.UUID,
+  defaultValue: DataTypes.UUIDV4 // Or DataTypes.UUIDV1
+}
+DataTypes.DATEONLY; // DATE without time
+" />
+    </p>
+
+
+    <p>
+      More you can find it out in official <NuxtLink class="text-primary hover:underline" target="_blank"
+        to="https://sequelize.org/docs/v6/core-concepts/model-basics/">Sequelize website</NuxtLink>
+    </p>
+
+
+    <div class="flex my-4 justify-between p-4">
+      <NuxtLink :to="`/docs/${doc_v}/database/getting-started`" class="btn md:px-8 py-5 btn-primary">Getting Started</NuxtLink>
+      <NuxtLink :to="`/docs/${doc_v}/quick-overview`" class="btn md:px-8 py-5 btn-primary">Quick Overview
+      </NuxtLink>
     </div>
+
+
+  </div>
 </template>
