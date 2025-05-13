@@ -1,4 +1,5 @@
 <script setup>
+const doc_v = "v1_0"
 definePageMeta({
   layout: 'home',
 })
@@ -56,8 +57,8 @@ useHead({
           </div>
 
           <div class="flex gap-3 items-center mb-3">
-            <NuxtLink to="/docs/v1_0_0/introduction" class="btn btn-primary">Get Started</NuxtLink>
-            <NuxtLink to="/docs/v1_0_0/installation" class="btn btn-primary btn-outline">Installation</NuxtLink>
+            <NuxtLink :to="`/docs/${doc_v}/introduction`" class="btn btn-primary">Get Started</NuxtLink>
+            <NuxtLink :to="`/docs/${doc_v}/installation`" class="btn btn-primary btn-outline">Installation</NuxtLink>
 
           </div>
         </div>

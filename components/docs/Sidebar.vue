@@ -1,7 +1,7 @@
 <script setup>
 import { NuxtLink } from '#components';
 
-const doc_v = "v1_0_0"
+const doc_v = "v1_0"
 
 </script>
 <template>
@@ -79,11 +79,21 @@ const doc_v = "v1_0_0"
 
 
             <li>
-                <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/database`">
-                    <i class="fa-solid fa-database"></i>
-                    Database
-                </NuxtLink>
+                <details>
+                    <summary><i class="fa-solid fa-database"></i> Database</summary>
+                    <ul>
+                        <li>
+                            <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/database/getting-started`"><i class="fa-solid fa-charging-station"></i> Getting Started</NuxtLink>
+                        </li>
+                        <li>
+                            <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/database/model-basics`"><i class="fa-solid fa-hexagon-nodes"></i> Model Basics</NuxtLink>
+                        </li>
+
+                        
+                    </ul>
+                </details>
             </li>
+
 
             <li>
                 <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/authentication`">
