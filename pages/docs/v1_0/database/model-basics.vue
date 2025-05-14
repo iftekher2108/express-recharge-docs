@@ -389,6 +389,22 @@ DataTypes.DATEONLY; // DATE without time
 " />
     </p>
 
+    <h5 class="text-base my-3">Column Options</h5>
+
+    <p class="my-3">
+      When defining a column, apart from specifying the type of the column, and the allowNull and defaultValue options
+      mentioned above, there are a lot more options that can be used. Some examples are below.
+    </p>
+
+    <p>
+      <CodePreview endpoint="Modules/Users/models/user.js" code="{
+  type: DataTypes.UUID,
+  defaultValue: DataTypes.UUIDV4 // Or DataTypes.UUIDV1
+}
+DataTypes.DATEONLY; // DATE without time
+" />
+    </p>
+
 
     <p>
       More you can find it out in official <NuxtLink class="text-primary hover:underline" target="_blank"
@@ -397,7 +413,8 @@ DataTypes.DATEONLY; // DATE without time
 
 
     <div class="flex my-4 justify-between p-4">
-      <NuxtLink :to="`/docs/${doc_v}/database/getting-started`" class="btn md:px-8 py-5 btn-primary">Getting Started</NuxtLink>
+      <NuxtLink :to="`/docs/${doc_v}/database/getting-started`" class="btn md:px-8 py-5 btn-primary">Getting Started
+      </NuxtLink>
       <NuxtLink :to="`/docs/${doc_v}/quick-overview`" class="btn md:px-8 py-5 btn-primary">Quick Overview
       </NuxtLink>
     </div>

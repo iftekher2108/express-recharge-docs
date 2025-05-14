@@ -1,4 +1,5 @@
 <script setup>
+const doc_v = "v1_0"
 definePageMeta({
     layout: 'docs'
 })
@@ -11,7 +12,7 @@ definePageMeta({
                 <li>home</li>
                 <li>docs</li>
                 <li>database</li>
-                <li>configration</li>
+                <li>getting-started</li>
             </ul>
         </div>
 
@@ -59,7 +60,7 @@ module.exports = sequelize;
 
          <div class="flex my-4 justify-between p-4">
       <NuxtLink :to="`/docs/${doc_v}/database/getting-started`" class="btn md:px-8 py-5 btn-primary">Getting Started</NuxtLink>
-      <NuxtLink :to="`/docs/${doc_v}/database/quick-overview`" class="btn md:px-8 py-5 btn-primary">Model Basics
+      <NuxtLink :to="`/docs/${doc_v}/database/model-basics`" class="btn md:px-8 py-5 btn-primary">Model Basics
       </NuxtLink>
     </div>
 

@@ -120,7 +120,7 @@ useHead({
                 <p>
                     Database integration offers seamless data management with ORM support, async/await, enabling easy queries, relationships, and dynamic migrations for efficient, secure, and scalable backend data operations.
                 </p>
-                " :link="`/docs/${doc_v}/database`" />
+                " :link="`/docs/${doc_v}/database/getting-started`" />
 
             </div>
 
