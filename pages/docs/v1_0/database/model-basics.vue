@@ -404,9 +404,110 @@ DataTypes.DATEONLY; // DATE without time
 DataTypes.DATEONLY; // DATE without time
 " />
     </p>
+    <br>
+    <CodePreview endpoint="Modules/Users/models/user.js" code="{
+      // instantiating will automatically set the flag to true if not set
+      flag: { type: DataTypes.BOOLEAN, allowNull: false, defaultValue: true },
 
+      // default values for dates => current time
+      myDate: { type: DataTypes.DATE, defaultValue: DataTypes.NOW },
+
+      // setting allowNull to false will add NOT NULL to the column, which means an error will be
+      // thrown from the DB when the query is executed if the column is null. If you want to check that a value
+      // is not null before querying the DB, look at the validations section below.
+      title: { type: DataTypes.STRING, allowNull: false },
+
+      // Creating two objects with the same value will throw an error. The unique property can be either a
+      // boolean, or a string. If you provide the same string for multiple columns, they will form a
+      // composite unique key.
+      uniqueOne: { type: DataTypes.STRING, unique: 'compositeIndex' },
+      uniqueTwo: { type: DataTypes.INTEGER, unique: 'compositeIndex' },
+
+      // The unique property is simply a shorthand to create a unique constraint.
+      someUnique: { type: DataTypes.STRING, unique: true },
+
+      // Go on reading for further information about primary keys
+      identifier: { type: DataTypes.STRING, primaryKey: true },
+
+      // autoIncrement can be used to create auto_incrementing integer columns
+      incrementMe: { type: DataTypes.INTEGER, autoIncrement: true },
+
+      // You can specify a custom column name via the 'field' attribute:
+      fieldWithUnderscores: {
+      type: DataTypes.STRING,
+      field: 'field_with_underscores',
+      },
+
+      // It is possible to create foreign keys:
+      bar_id: {
+      type: DataTypes.INTEGER,
+
+      references: {
+      // This is a reference to another model
+      model: Bar,
+
+      // This is the column name of the referenced model
+      key: 'id',
+
+      // With PostgreSQL, it is optionally possible to declare when to check the foreign key constraint, passing the
+      Deferrable type.
+      deferrable: Deferrable.INITIALLY_IMMEDIATE,
+      // Options:
+      // - `Deferrable.INITIALLY_IMMEDIATE` - Immediately check the foreign key constraints
+      // - `Deferrable.INITIALLY_DEFERRED` - Defer all foreign key constraint check to the end of a transaction
+      // - `Deferrable.NOT` - Don't defer the checks at all (default) - This won't allow you to dynamically change the
+      rule in a transaction
+      },
+          // Comments can only be added to columns in MySQL, MariaDB, PostgreSQL and MSSQL
+    commentMe: {
+      type: DataTypes.INTEGER,
+      comment: 'This is a column name that has a comment',
+    },
+  },
+  {
+
+    // Using `unique: true` in an attribute above is exactly the same as creating the index in the model's options:
+    indexes: [{ unique: true, fields: ['someUnique'] }],
+  },
+" />
+
+    <h5 class="text-base">Taking advantage of Models being classes</h5>
+
+    <p class="my-3">
+      The Sequelize models are ES6 classes. You can very easily add custom instance or class level methods.
+    </p>
 
     <p>
+      <CodePreview endpoint="Modules/Users/models/user.js" code="class User extends Model {
+  static classLevelMethod() {
+    return 'foo';
+  }
+  instanceLevelMethod() {
+    return 'bar';
+  }
+  getFullname() {
+    return [this.firstname, this.lastname].join(' ');
+  }
+}
+User.init(
+  {
+    firstname: Sequelize.TEXT,
+    lastname: Sequelize.TEXT,
+  },
+  { sequelize },
+);
+
+console.log(User.classLevelMethod()); // 'foo'
+const user = User.build({ firstname: 'Jane', lastname: 'Doe' });
+console.log(user.instanceLevelMethod()); // 'bar'
+console.log(user.getFullname()); // 'Jane Doe'
+" />
+
+
+    </p>
+
+
+    <p class="my-3">
       More you can find it out in official <NuxtLink class="text-primary hover:underline" target="_blank"
         to="https://sequelize.org/docs/v6/core-concepts/model-basics/">Sequelize website</NuxtLink>
     </p>

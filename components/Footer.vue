@@ -59,8 +59,12 @@ const date = new Date();
 
 
             <div class=" col-span-2">
-                <h3 class="text-3xl font-bold uppercase text-primary mb-3">About Us</h3>
+                <h3 class="text-3xl font-bold uppercase text-primary mb-3">Quick Link</h3>
                 <ul class="footer-menu flex flex-col gap-2 ">
+
+                     <li class="nav-link"><i class="fa-solid me-3 fa-arrow-right"></i>
+                        <NuxtLink to="/">Home</NuxtLink>
+                    </li>
 
                     <li class="nav-link"><i class="fa-solid me-3 fa-arrow-right"></i>
                         <NuxtLink to="/about-us">About Us</NuxtLink>
@@ -77,7 +81,7 @@ const date = new Date();
             </div>
         </div>
 
-        <hr class=" opacity-50 my-5">
+        <hr class=" opacity-20 my-5">
 
         <div class="flex items-center justify-between gap-4">
             <p>Copyright © {{ date.getFullYear() }} by <span class="copyright">Express Recharge</span></p>

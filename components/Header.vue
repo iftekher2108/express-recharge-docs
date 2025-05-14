@@ -62,22 +62,30 @@ const doc_v = "v1_0"
                 </NuxtLink>
             </div>
             <div class="navbar-center hidden lg:flex">
-                <ul class="menu w-full menu-horizontal">
+                <ul class="menu w-full gap-2 menu-horizontal">
+
                     <li>
+                        <NuxtLink to="/">Home</NuxtLink>
+                    </li>
+
+                    <li class="rounded bg-primary/40">
                         <NuxtLink :to="`/docs/${doc_v}/introduction`">Docs</NuxtLink>
                     </li>
-                    <li class="static">
+
+                    <li>
+                        <NuxtLink to="/about-us">About Us</NuxtLink>
+                    </li>
+
+                    <!-- <li class="static">
                         <details>
                             <summary>About Us</summary>
                             <ul class="p-1">
                                 <li class="w-full">
                                     <NuxtLink to="/about-us">About Us</NuxtLink>
                                 </li>
-                                <!-- <li class="w-full"><a>fhdfgh</a></li>
-                                <li class="w-full"><a>Sub menu 2bhxdfh</a></li> -->
                             </ul>
                         </details>
-                    </li>
+                    </li> -->
                     <!-- <li>
                         <NuxtLink to="/about-us">Item 3</NuxtLink>
                     </li> -->
@@ -92,7 +100,4 @@ const doc_v = "v1_0"
 
 </template>
 
-<style lang="scss" scoped>
-
-
-</style>
+<style lang="scss" scoped></style>
