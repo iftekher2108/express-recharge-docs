@@ -1,25 +1,25 @@
 <script setup>
 const doc_v = "v1_0"
 definePageMeta({
-    layout: 'docs'
+  layout: 'docs'
 })
 </script>
 <template>
-    <div>
+  <div>
 
-        <div class="breadcrumbs text-sm">
-            <ul>
-                <li>home</li>
-                <li>docs</li>
-                <li>database</li>
-                <li>getting-started</li>
-            </ul>
-        </div>
+    <div class="breadcrumbs text-sm">
+      <ul>
+        <li>home</li>
+        <li>docs</li>
+        <li>database</li>
+        <li>getting-started</li>
+      </ul>
+    </div>
 
-        this is database geting started page
+    this is database geting started page
 
 
-<!-- <h5 class="text-base">Globally Enforcing the table name to be equal to the model name</h5>
+    <!-- <h5 class="text-base">Globally Enforcing the table name to be equal to the model name</h5>
 
         <p>
             The example above will create a model named User pointing to a table also named User.
@@ -58,13 +58,14 @@ module.exports = sequelize;
 
 
 
-         <div class="flex my-4 justify-between p-4">
-      <NuxtLink :to="`/docs/${doc_v}/database/getting-started`" class="btn md:px-8 py-5 btn-primary">Getting Started</NuxtLink>
+    <div class="flex my-4 justify-between p-4">
+      <NuxtLink :to="`/docs/${doc_v}/database/getting-started`" class="btn md:px-8 py-5 btn-primary">Getting Started
+      </NuxtLink>
       <NuxtLink :to="`/docs/${doc_v}/database/model-basics`" class="btn md:px-8 py-5 btn-primary">Model Basics
       </NuxtLink>
     </div>
 
 
 
-    </div>
+  </div>
 </template>
