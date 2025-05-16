@@ -3,7 +3,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
-  // plugins: ['~/plugins/highlight.client.js'],
+  plugins: ['~/plugins/highlight.client.js'],
   vite: {
     plugins: [tailwindcss(),],
   },
@@ -40,7 +40,7 @@ export default defineNuxtConfig({
   modules: ["@nuxt/image", '@nuxtjs/sitemap', '@nuxtjs/robots'],
   image: {
     // domains:['localhost']
-    quality: 50,
+    quality: 40,
     format: ['webp'],
   },
   // sitemap: {

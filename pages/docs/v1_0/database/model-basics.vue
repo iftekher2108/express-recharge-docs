@@ -12,7 +12,7 @@ definePageMeta({
         <li>home</li>
         <li>docs</li>
         <li>database</li>
-        <li>configration</li>
+        <li>model-basics</li>
       </ul>
     </div>
 
@@ -30,16 +30,17 @@ definePageMeta({
     </p>
 
     <p class="mb-3">
-      Using sequelize.define(): This is the traditional method where you call the define method on your Sequelize
+      Using Model This is the traditional instance method where you can extends the Model method on your Sequelize
       instance.
     </p>
 
     <p>
-      <CodePreview endpoint="Modules/Users/models/user.js" code='const { DataTypes, TableHints } = require("sequelize");
-const db = require("@config/database");
+      <CodePreview endpoint="Modules/Users/models/user.js" code='const { DataTypes, Model } = require("sequelize");
+const sequelize = require("@config/database");
 
-const User = db.define(
-  "user",
+class User extends Model {}
+
+User.init(
   {
     id: {
       type: DataTypes.BIGINT,
@@ -84,18 +85,16 @@ const User = db.define(
     },
   },
   {
-    paranoid: true, // for createAt, updateAt and deleteAt
+  sequelize,
+  modelName:"user",
+  paranoid: true, // for createAt, updateAt and deleteAt
   }
 );
-
 
 module.exports = User;
 
 ' />
     </p>
-
-
-
 
     <h5 class="text-base my-3">Model Name and Table Name</h5>
 
@@ -109,21 +108,27 @@ module.exports = User;
     <hr class=" my-5 opacity-30">
 
     <h5 class="text-base">Enforcing the table name to be equal to the model name</h5>
-    <p class="mb-3">
+    <p class="my-3">
       You can stop the auto-pluralization performed by Sequelize using the <span
         class="bg-primary/20 p-1 rounded">freezeTableName: true</span> option. This way,
       Sequelize will infer the table name to be equal to the model name, without any modifications:
     </p>
 
     <p>
-      <CodePreview endpoint="Modules/Users/models/user.js" code="sequelize.define(
-  'User',
+      <CodePreview endpoint="Modules/Users/models/user.js" code="const { DataTypes, Model } = require('sequelize');
+const sequelize = require('@config/database');
+
+class User extends Model {}
+
+User.init(
   {
     // ... (attributes)
   },
   {
+  sequelize,
+  modelName:'user',
     freezeTableName: true,
-  },
+  }
 );
 " />
     </p>
@@ -156,10 +161,12 @@ module.exports = User;
 
     <p>
 
-      <CodePreview endpoint="Modules/Users/models/user.js" code='const { DataTypes, TableHints } = require("sequelize");
-const db = require("@config/database");
+      <CodePreview endpoint="Modules/Users/models/user.js" code='const { DataTypes, Model } = require("sequelize");
+const sequelize = require("@config/database");
 
-const User = db.define(
+class User extends Model {}
+
+User.init(
   "user",
   {
     // model field data 
