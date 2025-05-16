@@ -91,8 +91,8 @@ const doc_v = "v1_0"
                                     class="fa-solid fa-hexagon-nodes"></i> Model Basics</NuxtLink>
                         </li>
                         <li>
-                            <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/database/query-model`"><i
-                                    class="fa-solid fa-hexagon-nodes"></i> Query Models</NuxtLink>
+                            <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/database/model-instances`"><i
+                                    class="fa-solid fa-hexagon-nodes"></i> Model Instances</NuxtLink>
                         </li>
 
                     </ul>

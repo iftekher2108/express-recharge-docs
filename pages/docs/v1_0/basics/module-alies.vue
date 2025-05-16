@@ -15,7 +15,7 @@ definePageMeta({
             </ul>
         </div>
 
-        <h1 class=" text-3xl font-bold mb-4">Module Alies of Express Recharge</h1>
+        <h1 class=" text-3xl font-bold mb-4">Module Alies</h1>
 
         <p>
             In large-scale Express applications like Express Recharge, managing deeply nested import paths can become

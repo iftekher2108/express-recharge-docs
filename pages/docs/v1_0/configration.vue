@@ -74,7 +74,7 @@ useHead({
       </ul>
     </div>
 
-    <h1 class=" text-3xl font-bold mb-4">Configration of Express Recharge</h1>
+    <h1 class=" text-3xl font-bold mb-4">Configration</h1>
 
     <p>
       Express recharge is configured with sensible defaults to make you productive.

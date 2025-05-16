@@ -15,7 +15,7 @@ definePageMeta({
             </ul>
         </div>
 
-        <h1 class=" text-3xl font-bold mb-4">Middleware of Express Recharge</h1>
+        <h1 class=" text-3xl font-bold mb-4">Middleware</h1>
 
         <p>
             Middleware in Express.js refers to functions that execute during the request–response cycle. They can

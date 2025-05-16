@@ -16,7 +16,7 @@ definePageMeta({
       </ul>
     </div>
 
-    <h1 class=" text-3xl font-bold mb-4">Model Basics of Express Recharge</h1>
+    <h1 class=" text-3xl font-bold mb-4">Model Basics</h1>
 
     <p>
       Models define the structure of your data, including the columns, their data types, and any constraints or
@@ -176,47 +176,6 @@ User.init(
   }
 );
 
-// This creates the table if it doesnt exist
-// (and does nothing if it already exists)
-User.sync()
-  .then(() => {
-    console.log("User Model init successfully!");
-  })
-  .catch((err) => {
-    console.error("User sync failed:", err);
-  });
-
-  // ====================================================================
-
-//  This checks what is the current state of the table in the database
-// (which columns it has, what are their data types), and then
-// performs the necessary changes in the table to make it match the model.
-// User.sync({ alter: true }).then(() => {
-//     console.log("User model altered successfully!")
-// }) .catch((err) => {
-//     console.error("User sync failed:", err);
-// });
-
-// =========================================================================
-
-// This creates the table, dropping it first if it already existed
-// User.sync({ force: true })
-//   .then(() => {
-//     console.log("User model force-fully Created successfully!");
-//   })
-//   .catch((err) => {
-//     console.error("User sync failed:", err);
-//   });
-
-// ===========================================================================
-
-// // User model table drop with all Data (if you want to ?)
-// User.drop().then(() => {
-//     console.log("User model dropped!")
-// }) .catch((err) => {
-//     console.error("User sync failed:", err);
-// });
-
 module.exports = User;
 ' />
 
@@ -238,12 +197,18 @@ module.exports = User;
     </p>
 
     <p>
-      <CodePreview endpoint="Modules/Users/models/user.js" code="sequelize.define(
-  'User',
+      <CodePreview endpoint="Modules/Users/models/user.js" code="const { DataTypes, Model } = require('sequelize');
+const sequelize = require('@config/database');
+
+class User extends Model {}
+
+User.init(
   {
     // ... (attributes)
   },
   {
+  sequeilze,
+  modelName:'user',
     timestamps: false,
   },
 );
@@ -255,13 +220,18 @@ module.exports = User;
     </p>
 
     <p>
-      <CodePreview endpoint="Modules/Users/models/user.js" code="sequelize.define(
-  'User',
+      <CodePreview endpoint="Modules/Users/models/user.js" code="const { DataTypes, Model } = require('sequelize');
+const sequelize = require('@config/database');
+
+class User extends Model {}
+
+User.init(
   {
     // ... (attributes)
   },
   {
-    
+    sequelize,
+    modelName:'user'
     // don't forget to enable timestamps!
     timestamps: true,
 
@@ -278,15 +248,22 @@ module.exports = User;
     <h5 class="text-base my-3">Column declaration</h5>
 
     <p>
-      <CodePreview endpoint="Modules/Users/models/user.js" code="const sequelize = require('@config/database');
-      
-      sequelize.define(
-  'User',
+      <CodePreview endpoint="Modules/Users/models/user.js" code="const { DataTypes, Model } = require('sequelize');
+const sequelize = require('@config/database');
+
+class User extends Model {}
+
+User.init(
   {
      name: {
       type: DataTypes.STRING,
     },
+  },
+  {
+  sequelize,
+  modelName:'user'
   }
+
 );
 " />
     </p>
@@ -478,9 +455,9 @@ DataTypes.DATEONLY; // DATE without time
   },
 " />
 
-    <h5 class="text-base">Taking advantage of Models being classes</h5>
+    <h5 class="text-base mt-3">Taking advantage of Models being classes</h5>
 
-    <p class="my-3">
+    <p class="mb-3">
       The Sequelize models are ES6 classes. You can very easily add custom instance or class level methods.
     </p>
 
@@ -493,7 +470,7 @@ DataTypes.DATEONLY; // DATE without time
     return 'bar';
   }
   getFullname() {
-    return [this.firstname, this.lastname].join(' ');
+    return this.firstname+' '+ this.lastname];
   }
 }
 User.init(
@@ -523,7 +500,7 @@ console.log(user.getFullname()); // 'Jane Doe'
     <div class="flex my-4 justify-between p-4">
       <NuxtLink :to="`/docs/${doc_v}/database/getting-started`" class="btn md:px-8 py-5 btn-primary">Getting Started
       </NuxtLink>
-      <NuxtLink :to="`/docs/${doc_v}/quick-overview`" class="btn md:px-8 py-5 btn-primary">Quick Overview
+      <NuxtLink :to="`/docs/${doc_v}/database/model-instances`" class="btn md:px-8 py-5 btn-primary">Model Instances
       </NuxtLink>
     </div>
 

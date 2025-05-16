@@ -74,7 +74,7 @@ useHead({
                 <li>introduction</li>
             </ul>
         </div>
-        <h1 class=" text-3xl font-bold mb-4">Introduction of Express Recharge</h1>
+        <h1 class=" text-3xl font-bold mb-4">Introduction</h1>
 
         <p>
             <NuxtLink class="text-primary" to="/docs/v1_0_0/installation">Express recharge</NuxtLink> is a powerful web

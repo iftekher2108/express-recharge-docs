@@ -74,7 +74,7 @@ useHead({
         <li>installation</li>
       </ul>
     </div>
-    <h1 class=" text-3xl font-bold mb-4">Installation of Express Recharge</h1>
+    <h1 class=" text-3xl font-bold mb-4">Installation</h1>
 
     <p>
       Follow the instructions below to install and set up your Express Recharge project locally.

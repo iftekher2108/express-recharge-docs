@@ -16,7 +16,7 @@ definePageMeta({
             </ul>
         </div>
 
-        <h1 class=" text-3xl font-bold mb-4">Routing of Express Recharge</h1>
+        <h1 class=" text-3xl font-bold mb-4">Routing</h1>
 
         <h5 class="text-base">🧭 What is Routing?</h5>
 
