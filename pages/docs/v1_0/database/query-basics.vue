@@ -394,6 +394,16 @@ await User.increment({ age: -5 }, { where: { id: 1 } }); // Will decrease age to
 " /> 
         </p>
 
+        <br>
+
+        <p class="my-3">
+      More you can find it out in official <NuxtLink class="text-primary hover:underline" target="_blank"
+        to="https://sequelize.org/docs/v6/core-concepts/model-querying-basics/">Sequelize website</NuxtLink>
+    </p>
+
+        <br>
+
+
          <div class="flex my-4 justify-between p-4">
             <NuxtLink :to="`/docs/${doc_v}/database/model-instances`" class="btn md:px-8 py-5 btn-primary">Model instances
             </NuxtLink>

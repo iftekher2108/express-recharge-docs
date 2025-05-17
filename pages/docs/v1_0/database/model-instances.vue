@@ -172,6 +172,12 @@ await jane.increment(['age', 'cash'], { by: 2 });" />
 
 
         </p>
+        <br>
+
+        <p class="my-3">
+      More you can find it out in official <NuxtLink class="text-primary hover:underline" target="_blank"
+        to="https://sequelize.org/docs/v6/core-concepts/model-instances/">Sequelize website</NuxtLink>
+    </p>
 
         <br>
 

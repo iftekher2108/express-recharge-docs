@@ -106,6 +106,11 @@ const doc_v = "v1_0"
                                 <i class="fa-solid fa-code-fork"></i> Query Finder</NuxtLink>
                         </li>
 
+                        <li>
+                            <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/database/getter-setter`">
+                                <i class="fa-solid fa-code-fork"></i> Getter & Setter</NuxtLink>
+                        </li>
+
 
                     </ul>
                 </details>
