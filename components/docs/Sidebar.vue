@@ -87,13 +87,25 @@ const doc_v = "v1_0"
                                     class="fa-solid fa-charging-station"></i> Getting Started</NuxtLink>
                         </li>
                         <li>
-                            <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/database/model-basics`"><i
-                                    class="fa-solid fa-hexagon-nodes"></i> Model Basics</NuxtLink>
+                            <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/database/model-basics`">
+                                <i class="fa-solid fa-code-compare"></i>
+                                 Model Basics</NuxtLink>
                         </li>
                         <li>
-                            <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/database/model-instances`"><i
-                                    class="fa-solid fa-hexagon-nodes"></i> Model Instances</NuxtLink>
+                            <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/database/model-instances`">
+                                <i class="fa-solid fa-code-pull-request"></i> Model Instances</NuxtLink>
                         </li>
+
+                        <li>
+                            <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/database/query-basics`">
+                                <i class="fa-solid fa-server"></i> Query Basics</NuxtLink>
+                        </li>
+
+                         <li>
+                            <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/database/query-finder`">
+                                <i class="fa-solid fa-code-fork"></i> Query Finder</NuxtLink>
+                        </li>
+
 
                     </ul>
                 </details>

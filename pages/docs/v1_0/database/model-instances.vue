@@ -29,7 +29,7 @@ definePageMeta({
 
 
         <p>
-            <CodePreview endpoint="Modules/Users/models/user.js" code="const jane = User.build({ name: 'Jane' });
+            <CodePreview endpoint="js" code="const jane = User.build({ name: 'Jane' });
 console.log(jane.name); // 'Jane'
 " />
         </p>
@@ -45,7 +45,7 @@ console.log(jane.name); // 'Jane'
 
         <p>
 
-            <CodePreview endpoint="Modules/Users/models/user.js" code="await jane.save();
+            <CodePreview endpoint="js" code="await jane.save();
 console.log('Jane was saved to the database!');
 " />
         </p>
@@ -65,7 +65,7 @@ console.log('Jane was saved to the database!');
         </p>
 
         <p>
-            <CodePreview endpoint="Modules/Users/models/user.js" code="const jane = await User.create({ name: 'Jane' });
+            <CodePreview endpoint="js" code="const jane = await User.create({ name: 'Jane' });
 // Jane exists in the database now!
 console.log(jane.name); // 'Jane'
 " />
@@ -82,7 +82,7 @@ console.log(jane.name); // 'Jane'
 
         <p>
 
-            <CodePreview endpoint="Modules/Users/models/user.js" code="const jane = await User.create({ name: 'Jane' });
+            <CodePreview endpoint="js" code="const jane = await User.create({ name: 'Jane' });
             // console.log(jane); // Don't do this
             console.log(jane.toJSON()); // This is good!
             console.log(JSON.stringify(jane, null, 4)); // This is also good!
@@ -94,7 +94,7 @@ console.log(jane.name); // 'Jane'
             accordingly:</p>
 
         <p>
-            <CodePreview endpoint="Modules/Users/models/user.js" code="const jane = await User.create({ name: 'Jane' });
+            <CodePreview endpoint="js" code="const jane = await User.create({ name: 'Jane' });
 jane.set({
   name: 'Ada',
   favoriteColor: 'blue',
@@ -114,7 +114,7 @@ await jane.save();
 
         <p>
 
-            <CodePreview endpoint="Modules/Users/models/user.js" code="const jane = await User.create({ name: 'Jane' });
+            <CodePreview endpoint="js" code="const jane = await User.create({ name: 'Jane' });
 jane.favoriteColor = 'blue';
 await jane.update({ name: 'Ada' });
 // The database now has 'Ada' for name, but still has the default 'green' for favorite color
@@ -127,7 +127,7 @@ await jane.save();
         <p class="mb-3">You can delete an instance by calling destroy:</p>
 
         <p>
-            <CodePreview endpoint="Modules/Users/models/user.js" code="const jane = await User.create({ name: 'Jane' });
+            <CodePreview endpoint="js" code="const jane = await User.create({ name: 'Jane' });
 console.log(jane.name); // 'Jane'
 await jane.destroy();
 // Now this entry was removed from the database
@@ -146,7 +146,7 @@ await jane.destroy();
 
 
         <p>
-            <CodePreview endpoint="Modules/Users/models/user.js" code="const jane = await User.create({ name: 'Jane', age: 100 });
+            <CodePreview endpoint="js" code="const jane = await User.create({ name: 'Jane', age: 100 });
 const incrementResult = await jane.increment('age', { by: 2 });
 // Note: to increment by 1 you can omit the `by` option and just do `user.increment('age')`
 
@@ -161,7 +161,7 @@ const incrementResult = await jane.increment('age', { by: 2 });
 
         <p>
 
-            <CodePreview endpoint="Modules/Users/models/user.js" code="const jane = await User.create({ name: 'Jane', age: 100, cash: 5000 });
+            <CodePreview endpoint="js" code="const jane = await User.create({ name: 'Jane', age: 100, cash: 5000 });
 await jane.increment({
   age: 2,
   cash: 100,
@@ -178,8 +178,7 @@ await jane.increment(['age', 'cash'], { by: 2 });" />
         <div class="flex my-4 justify-between p-4">
             <NuxtLink :to="`/docs/${doc_v}/database/model-basics`" class="btn md:px-8 py-5 btn-primary">Model Basics
             </NuxtLink>
-            <NuxtLink :to="`/docs/${doc_v}/database/model-instances`" class="btn md:px-8 py-5 btn-primary">Quick
-                Overview
+            <NuxtLink :to="`/docs/${doc_v}/database/query-basics`" class="btn md:px-8 py-5 btn-primary">Query Basics
             </NuxtLink>
         </div>
 
