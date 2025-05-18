@@ -111,6 +111,11 @@ const doc_v = "v1_0"
                                 <i class="fa-solid fa-code-fork"></i> Getter & Setter</NuxtLink>
                         </li>
 
+                         <li>
+                            <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/database/validation-const`">
+                                <i class="fa-solid fa-code-fork"></i> Validation & constaints</NuxtLink>
+                        </li>
+
 
                     </ul>
                 </details>

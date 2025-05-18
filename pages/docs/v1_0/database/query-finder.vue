@@ -100,7 +100,7 @@ if (created) {
         <div class="flex my-4 justify-between p-4">
             <NuxtLink :to="`/docs/${doc_v}/database/query-basics`" class="btn md:px-8 py-5 btn-primary">Query Basics
             </NuxtLink>
-            <NuxtLink :to="`/docs/${doc_v}/database/query-finder`" class="btn md:px-8 py-5 btn-primary">Query Finder
+            <NuxtLink :to="`/docs/${doc_v}/database/getter-setter`" class="btn md:px-8 py-5 btn-primary">Getter & Setter
             </NuxtLink>
         </div>
 
