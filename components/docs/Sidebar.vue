@@ -1,6 +1,4 @@
 <script setup>
-import { NuxtLink } from '#components';
-
 const doc_v = "v1_0"
 
 </script>
