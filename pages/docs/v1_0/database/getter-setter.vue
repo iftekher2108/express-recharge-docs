@@ -12,7 +12,7 @@ definePageMeta({
                 <li>home</li>
                 <li>docs</li>
                 <li>database</li>
-                <li>query-basics</li>
+                <li>getter-setter</li>
             </ul>
         </div>
 
@@ -111,7 +111,7 @@ User.init({
         <div class="flex my-4 justify-between p-4">
             <NuxtLink :to="`/docs/${doc_v}/database/query-finder`" class="btn md:px-8 py-5 btn-primary">Query finder
             </NuxtLink>
-            <NuxtLink :to="`/docs/${doc_v}/database/query-finder`" class="btn md:px-8 py-5 btn-primary">Query Finder
+            <NuxtLink :to="`/docs/${doc_v}/database/validation-const`" class="btn md:px-8 py-5 btn-primary">Validation & constraints
             </NuxtLink>
         </div>
 

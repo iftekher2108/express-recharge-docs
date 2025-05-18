@@ -116,7 +116,36 @@ const doc_v = "v1_0"
                                 <i class="fa-solid fa-code-fork"></i> Validation & constaints</NuxtLink>
                         </li>
 
+                        <li>
+                            <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/database/raw-queries`">
+                                <i class="fa-solid fa-code-fork"></i> Raw Queries</NuxtLink>
+                        </li>
 
+                        <li>
+                            <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/database/paranoid`">
+                                <i class="fa-solid fa-code-fork"></i> Paranoid</NuxtLink>
+                        </li>
+
+
+                    </ul>
+                </details>
+            </li>
+
+               <li>
+                <details>
+                    <summary><i class="fa-solid fa-rocket"></i> Relationships</summary>
+                    <ul>
+                        <li>
+                            <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/relationships/associations`"><i
+                                    class="fa-regular fa-file-powerpoint"></i> Associations</NuxtLink>
+                        </li>
+                        
+                        <!-- <li>
+                            <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/relationships/html-to-pdf`"><i
+                                    class="fa-solid fa-file-code"></i> Html to pdf</NuxtLink>
+                        </li> -->
+                       
+                  
                     </ul>
                 </details>
             </li>
