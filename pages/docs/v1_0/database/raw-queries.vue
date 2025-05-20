@@ -41,8 +41,119 @@ definePageMeta({
             format the results. For example, for a simple select query you could do:
         </p>
 
-        
+        <p>
+            <CodePreview endpoint="js" code="const { QueryTypes } = require('sequelize');
+            const sequelize = require('@config/database');
 
+const users = await sequelize.query('SELECT * FROM `users`', {
+  type: QueryTypes.SELECT,
+});
+// We didn't need to destructure the result here - the results were returned directly
+" />
+        </p>
+
+        <p>
+            Several other query types are available. Peek into the source for details.
+        </p>
+
+        <p>
+            Several other query types are available. Peek into the source for details.
+        </p>
+
+
+        <p>
+            <CodePreview endpoint="js" code="const { QueryTypes } = require('sequelize');
+            const sequelize = require('@config/database');
+
+const users = await sequelize.query('SELECT * FROM `users`', {
+  type: QueryTypes.SELECT,
+});
+// We didn't need to destructure the result here - the results were returned directly
+" />
+        </p>
+
+
+
+        <h5 class="text-base my-3">
+            Replacements
+        </h5>
+
+        <p>
+            Replacements in a query can be done in two different ways, either using named parameters (starting with :),
+            or unnamed, represented by a ?. Replacements are passed in the options object.
+        </p>
+
+        <li>
+            If an array is passed, ? will be replaced in the order that they appear in the array
+        </li>
+        <li class="mb-3">
+            If an object is passed, :key will be replaced with the keys from that object. If the object contains keys
+            not found in the query or vice versa, an exception will be thrown.
+        </li>
+
+
+        <p>
+            <CodePreview endpoint="js" code="const { QueryTypes } = require('sequelize');
+
+await sequelize.query('SELECT * FROM projects WHERE status = ?', {
+  replacements: ['active'],
+  type: QueryTypes.SELECT,
+});
+
+await sequelize.query('SELECT * FROM projects WHERE status = :status', {
+  replacements: { status: 'active' },
+  type: QueryTypes.SELECT,
+});
+" />
+        </p>
+
+        <p class="my-3">
+            Array replacements will automatically be handled, the following query searches for projects where the status
+            matches an array of values.
+        </p>
+
+        <p>
+            <CodePreview endpoint="js" code="const { QueryTypes } = require('sequelize');
+
+await sequelize.query('SELECT * FROM projects WHERE status IN(:status)', {
+  replacements: { status: ['active', 'inactive'] },
+  type: QueryTypes.SELECT,
+});
+" />
+        </p>
+
+
+        <p class="my-3">
+            To use the wildcard operator %, append it to your replacement. The following query matches users with names
+            that start with 'ben'.
+        </p>
+
+        <p>
+            <CodePreview endpoint="js" code="const { QueryTypes } = require('sequelize');
+
+await sequelize.query('SELECT * FROM users WHERE name LIKE :search_name', {
+  replacements: { search_name: 'ben%' },
+  type: QueryTypes.SELECT,
+});
+" />
+        </p>
+
+        <br>
+
+         <p class="my-3">
+            More you can find it out in official <NuxtLink class="text-primary hover:underline" target="_blank"
+                to="https://sequelize.org/docs/v6/core-concepts/raw-queries/">Sequelize website</NuxtLink>
+        </p>
+
+        <br>
+
+
+        <div class="flex my-4 justify-between p-4">
+            <NuxtLink :to="`/docs/${doc_v}/database/validation-const`" class="btn md:px-8 py-5 btn-primary">Validation & Constraints
+            </NuxtLink>
+            <NuxtLink :to="`/docs/${doc_v}/database/paranoid`" class="btn md:px-8 py-5 btn-primary">Paranoid
+            </NuxtLink>
+        </div>
 
 
 
