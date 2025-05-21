@@ -52,13 +52,10 @@ const users = await sequelize.query('SELECT * FROM `users`', {
 " />
         </p>
 
-        <p>
+        <p class="my-3">
             Several other query types are available. Peek into the source for details.
         </p>
 
-        <p>
-            Several other query types are available. Peek into the source for details.
-        </p>
 
 
         <p>
