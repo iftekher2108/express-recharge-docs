@@ -18,7 +18,7 @@ definePageMeta({
 
         <h1 class="text-3xl font-bold mb-4">Model Getter & Setter</h1>
 
-        <h5 class="text-base my-3">Getters</h5>
+        <h5 class="text-base mt-3">Getters</h5>
 
         <p class="mb-3">
             A getter is a get() function defined for one column in the model definition:
@@ -48,7 +48,7 @@ User.init({
             This getter, just like a standard JavaScript getter, is called automatically when the field value is read.
         </p>
 
-        <h5 class="text-base my-3">Setters</h5>
+        <h5 class="text-base mt-3">Setters</h5>
 
         <p class="mb-3">
             A setter is a set() function defined for one column in the model definition. It receives the value being
@@ -76,7 +76,7 @@ User.init({
         </p>
 
 
-        <p class="my-3">
+        <p class="py-3">
             If we wanted to involve another field from our model instance in the computation, that is possible and very
             easy!
         </p>

@@ -35,7 +35,7 @@ definePageMeta({
 
         <p class="my-3">Basic structure:</p>
         <p>
-            <CodePreview endpoint="Modules/Users/middlewares/example.js" code=" const example = (req, res, next) => {
+            <CodePreview endpoint="Modules/Users/Middlewares/example.js" code=" const example = (req, res, next) => {
   // your logic here
   next(); // proceed to next middleware or route
 }
@@ -103,10 +103,10 @@ module.exports = Auth;
 ' />
         </p>
 
-        <h5 class="text-base my-3">🛣️ Using Middleware in Routes</h5>
+        <h5 class="text-base my-3">🛣️ Using Middleware in module Routes</h5>
 
         <p>
-            <CodePreview endpoint="Modules/Users/routes/routes.js" code='const express = require("express");
+            <CodePreview endpoint="Modules/Users/Routes/routes.js" code='const express = require("express");
 const router = express.Router();
 const Auth = require("@middlewares/Auth");
 const UserController = require("@modules/Users/controllers/UsersController");
@@ -125,11 +125,11 @@ module.exports = router;
 
 
         <p>
-            <CodePreview endpoint="app.js" code='const cors = require("cors");
+            <CodePreview endpoint="mainRoute.js" code='const cors = require("cors");
 const rateLimiter = require("@middlewares/rateLimiter");
 
-app.use(cors({ origin: "*" }));
-app.use(rateLimiter); // custom middleware
+router.use(cors({ origin: "*" }));
+router.use(rateLimiter); // custom middleware
 ' />
         </p>
 

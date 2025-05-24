@@ -106,22 +106,22 @@ const doc_v = "v1_0"
 
                         <li>
                             <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/database/getter-setter`">
-                                <i class="fa-solid fa-code-fork"></i> Getter & Setter</NuxtLink>
+                                <i class="fa-solid fa-ellipsis"></i> Getter & Setter</NuxtLink>
                         </li>
 
                          <li>
                             <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/database/validation-const`">
-                                <i class="fa-solid fa-code-fork"></i> Validation & constaints</NuxtLink>
+                                <i class="fa-solid fa-vial-circle-check"></i> Validation & constaints</NuxtLink>
                         </li>
 
                         <li>
                             <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/database/raw-queries`">
-                                <i class="fa-solid fa-code-fork"></i> Raw Queries</NuxtLink>
+                                <i class="fa-solid fa-code"></i> Raw Queries</NuxtLink>
                         </li>
 
                         <li>
                             <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/database/paranoid`">
-                                <i class="fa-solid fa-code-fork"></i> Paranoid</NuxtLink>
+                                <i class="fa-solid fa-recycle"></i> Paranoid</NuxtLink>
                         </li>
 
 
@@ -134,8 +134,8 @@ const doc_v = "v1_0"
                     <summary><i class="fa-solid fa-rocket"></i> Relationships</summary>
                     <ul>
                         <li>
-                            <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/relationships/associations`"><i
-                                    class="fa-regular fa-file-powerpoint"></i> Associations</NuxtLink>
+                            <NuxtLink exact-active-class="active" :to="`/docs/${doc_v}/relationships/associations`">
+                                <i class="fa-solid fa-link"></i> Associations</NuxtLink>
                         </li>
                         
                         <!-- <li>

@@ -41,12 +41,12 @@ useHead({
             <h5 class="text-base"> 📁 Folder Structure</h5>
 
             <p>A standard module contains the following subfolders:</p>
-            <li><span class="bg-primary/20 p-0.5 rounded">controllers/:</span> Handles the request/response logic.</li>
-            <li><span class="bg-primary/20 p-0.5 rounded">middlewares/:</span> Contains middleware functions specific to
+            <li><span class="bg-primary/20 p-0.5 rounded">Controllers/:</span> Handles the request/response logic.</li>
+            <li><span class="bg-primary/20 p-0.5 rounded">Middlewares/:</span> Contains middleware functions specific to
                   the module.</li>
-            <li><span class="bg-primary/20 p-0.5 rounded">models/:</span> Defines data models and ORM relationships.
+            <li><span class="bg-primary/20 p-0.5 rounded">Models/:</span> Defines data models and ORM relationships.
             </li>
-            <li><span class="bg-primary/20 p-0.5 rounded">routes/:</span> Manages HTTP routes and maps them to
+            <li><span class="bg-primary/20 p-0.5 rounded">Routes/:</span> Manages HTTP routes and maps them to
                   controller actions.</li>
 
             <br>
@@ -64,12 +64,12 @@ useHead({
             <p>
                   <CodePreview copy="false" endpoint="Folder Architecture" code="Modules/
   ├── Users/
-        ├── controllers/
+        ├── Controllers/
               ├── UserController.js   // build logic here
-        ├── middlewares/
-        ├── models/  
+        ├── Middlewares/
+        ├── Models/  
               ├── User.js     // relation to database table
-        ├── routes/
+        ├── Routes/
               ├── routes.js  //  uri manage with Controller logic
 
 " />
@@ -87,10 +87,10 @@ useHead({
 
             <p class="mb-3">
                   This command will automatically generate the module with the necessary folders: <span
-                        class="p-1 rounded bg-primary/20">controllers</span>, <span
-                        class="p-1 rounded bg-primary/20">models</span>, <span
-                        class="p-1 rounded bg-primary/20">middlewares</span>, and <span
-                        class="p-1 rounded bg-primary/20">routes</span>.
+                        class="p-1 rounded bg-primary/20">Controllers</span>, <span
+                        class="p-1 rounded bg-primary/20">Models</span>, <span
+                        class="p-1 rounded bg-primary/20">Middlewares</span>, and <span
+                        class="p-1 rounded bg-primary/20">Routes</span>.
             </p>
 
             <h5 class="text-base">Example: After Creating the Admin Module</h5>
@@ -103,13 +103,13 @@ useHead({
                   <CodePreview copy="false" endpoint="Modules Folder" code="Modules/
   ├── Users/
   ├── admin/
-        ├── controllers/
+        ├── Controllers/
               ├── adminController.js   // build logic here
-        ├── middlewares/
+        ├── Middlewares/
               ├── admin.js
-        ├── models/  
+        ├── Models/  
               ├── admin.js     // relation to database table
-        ├── routes/
+        ├── Routes/
               ├── routes.js  //  uri manage with Controller logic
               
 
@@ -118,19 +118,19 @@ useHead({
 
             <p class="my-3">Each module is now self-contained and can be maintained independently.</p>
 
-            <h5 class="text-base">Step 2: Register Routes in app.js</h5>
+            <h5 class="text-base">Step 2: Register Module Routes in mainRoute.js</h5>
 
             <p class="mb-3">
-                  To make your module functional, import its routes in the main app.js file and register them using
+                  To make your module functional, import its routes in the main mainRoute.js file and register them using
                   Express middleware.
             </p>
 
             <p>
-                  <CodePreview copy="false" endpoint="app.js" code='// modular path
-const adminRoute = require("@modules/admin/routes/routes");  // import the admin module route
+                  <CodePreview copy="false" endpoint="mainRoute.js" code='// modular path
+const adminRoute = require("@modules/admin/Routes/routes");  // import the admin module route
 
 // modular routes Register
-app.use("/",userRoute);       // register the module route here
+router.use("/",adminRoute);       // register the module route here
 
 ' />
             </p>
@@ -140,65 +140,7 @@ app.use("/",userRoute);       // register the module route here
             </p>
 
 
-            <h3 class="text-base my-3">
-                  this is full of simple app.js
-            </h3>
 
-            <p>
-                  <CodePreview copy="false" endpoint="app.js" code='const express = require("express");
-const app = express();
-
-// const limiter = require("./Config/rate-limiter")
-// rate-limit set global
-// app.use(limiter)
-
-// json allow
-app.use(express.json());
-// urlencoded allow
-app.use(
-  express.urlencoded({
-    extended: true,
-  })
-);
-
-// cors allow
-const cors = require("cors");
-app.use(
-  cors({
-    origin: "*",
-  })
-);
-
-// database
-const db = require("@config/database");
-
-// database init
-// db.sync({ alter: true }).then(() => {
-//     console.log("Database synced!");
-//   }).catch(err => {
-//     console.error("Database sync failed:", err);
-//   });
-
-// modular path
-const userRoute = require("@modules/Users/routes/routes");
-const adminRoute = require("@modules/admin/routes/routes");  // import the admin module route
-
-// modular routes Register
-app.use("/", userRoute);
-app.use("/",adminRoute);       // register the module route here
-
-
-// app.use("/api/v1", (req, res, next) => {
-//   console.log("API v1 route accessed");
-//   next();
-// });
-
-// middleware
-// app.use(middleware)
-
-module.exports = app;
-' />
-            </p>
 
             <h5 class="text-base my-3">🧠 Benefits of Modular Architecture</h5>
 

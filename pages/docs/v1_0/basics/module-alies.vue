@@ -29,7 +29,7 @@ definePageMeta({
         </p>
 
         <p>
-            <CodePreview endpoint="js" code="const User = require('../../../Modules/Users/models/User');
+            <CodePreview endpoint="js" code="const User = require('../../../Modules/Users/Models/User');
 " />
         </p>
 
@@ -38,7 +38,7 @@ definePageMeta({
         </p>
 
         <p>
-            <CodePreview endpoint="js" code="const User = require('@modules/Users/models/User');
+            <CodePreview endpoint="js" code="const User = require('@modules/Users/Models/User');
 " />
         </p>
 
@@ -68,7 +68,7 @@ definePageMeta({
 
                     <tr>
                         <td>@config</td>
-                        <td>Config/</td>
+                        <td>Configs/</td>
                         <td>Database, environment configs</td>
                     </tr>
 
@@ -114,7 +114,7 @@ definePageMeta({
         <div class="flex my-4 justify-between p-4">
             <NuxtLink :to="`/docs/${doc_v}/basics/middleware`" class="btn md:px-8 py-5 btn-primary">Middleware
             </NuxtLink>
-            <NuxtLink :to="`/docs/${doc_v}/basics/module-alies`" class="btn md:px-8 py-5 btn-primary">Module alies
+            <NuxtLink :to="`/docs/${doc_v}/database/getting-started`" class="btn md:px-8 py-5 btn-primary">database
             </NuxtLink>
         </div>
 

@@ -40,7 +40,7 @@ definePageMeta({
         <h5 class="text-base mb-3">🔗 Basic Route Example</h5>
 
         <p>
-            <CodePreview endpoint="Modules/Users/routes/routes.js" code="const express = require('express');
+            <CodePreview endpoint="Modules/Users/Routes/routes.js" code="const express = require('express');
 const router = express.Router();
 
 // GET route
@@ -86,7 +86,7 @@ app.use('/', userRoute);
         </p>
 
         <p>
-            <CodePreview copy="false" endpoint="app.js" code="Modules/
+            <CodePreview copy="false" endpoint="Folder Stracture" code="Modules/
   └── Users/
       ├── controllers/
           └── UserController.js
@@ -96,10 +96,10 @@ app.use('/', userRoute);
         </p>
 
 
-        <h5 class="text-base my-3">Step 1: Define Controller Logic</h5>
+        <h5 class="text-base py-3">Step 1: Define Controller Logic</h5>
 
         <p>
-            <CodePreview endpoint="Modules/Users/controllers/UserController.js" code="
+            <CodePreview endpoint="Modules/Users/Controllers/UserController.js" code="
 exports.getUsers = (req, res) => {
   res.json([{ id: 1, name: 'John Doe' }]);
 };
@@ -115,9 +115,9 @@ exports.createUser = (req, res) => {
         <h5 class="text-base my-3">Step 2: Connect Routes</h5>
 
         <p>
-            <CodePreview endpoint="Modules/Users/routes/routes.js" code="const express = require('express');
+            <CodePreview endpoint="Modules/Users/Routes/routes.js" code="const express = require('express');
 const router = express.Router();
-const UserController = require('@modules/Users/controllers/UserController');
+const UserController = require('@modules/Users/Controllers/UserController');
 
 // GET users
 router.get('/users', UserController.getUsers);
@@ -129,15 +129,10 @@ module.exports = router;
 " />
         </p>
 
-        <h5 class="text-base my-3">Step 3: Register in app.js</h5>
+        <h5 class="text-base my-3">Step 3: Register in mainRoute.js</h5>
 
         <p>
-            <CodePreview endpoint="app.js" code="const express = require('express');
-const app = express();
-
-app.use(express.json()); // for parsing application/json
-
-const userRoute = require('@modules/Users/routes/routes');
+            <CodePreview endpoint="mainRoute.js" code="const userRoute = require('@modules/Users/Routes/routes');
 app.use('/', userRoute);
 
 " />

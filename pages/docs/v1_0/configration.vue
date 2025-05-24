@@ -171,6 +171,7 @@ Utilities/
   ├── jwt.js                  // for Bearer token authentication 
 .env
 .env.example
+mainRoute.js                  // all module route, middleware register to there
 app.js                        // app configration file
 package.json
 README.md

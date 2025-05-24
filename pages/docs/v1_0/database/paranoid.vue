@@ -184,10 +184,9 @@ await Post.findAll({
         <div class="flex my-4 justify-between p-4">
             <NuxtLink :to="`/docs/${doc_v}/database/raw-queries`" class="btn md:px-8 py-5 btn-primary">Raw Queries
             </NuxtLink>
-            <NuxtLink :to="`/docs/${doc_v}/database/paranoid`" class="btn md:px-8 py-5 btn-primary">Paranoid
+            <NuxtLink :to="`/docs/${doc_v}/relationships/associations`" class="btn md:px-8 py-5 btn-primary">Table associations
             </NuxtLink>
         </div>
-
 
 
     </div>

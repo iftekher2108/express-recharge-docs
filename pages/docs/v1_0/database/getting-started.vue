@@ -59,7 +59,7 @@ module.exports = sequelize;
 
 
     <div class="flex my-4 justify-between p-4">
-      <NuxtLink :to="`/docs/${doc_v}/database/getting-started`" class="btn md:px-8 py-5 btn-primary">Getting Started
+      <NuxtLink :to="`/docs/${doc_v}/basics/module-alies`" class="btn md:px-8 py-5 btn-primary">Module Alies
       </NuxtLink>
       <NuxtLink :to="`/docs/${doc_v}/database/model-basics`" class="btn md:px-8 py-5 btn-primary">Model Basics
       </NuxtLink>

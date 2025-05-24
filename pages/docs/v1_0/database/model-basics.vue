@@ -23,7 +23,7 @@ definePageMeta({
       configurations
     </p>
 
-    <h5 class="text-base my-3">Defining a Model</h5>
+    <h5 class="text-base mt-3">Defining a Model</h5>
 
     <p>
       You can define a model in Sequelize in two primary ways:
@@ -35,7 +35,7 @@ definePageMeta({
     </p>
 
     <p>
-      <CodePreview endpoint="Modules/Users/models/user.js" code='const { DataTypes, Model } = require("sequelize");
+      <CodePreview endpoint="Modules/Users/Models/User.js" code='const { DataTypes, Model } = require("sequelize");
 const sequelize = require("@config/database");
 
 class User extends Model {}
@@ -96,7 +96,7 @@ module.exports = User;
 ' />
     </p>
 
-    <h5 class="text-base my-3">Model Name and Table Name</h5>
+    <h5 class="text-base mt-3">Model Name and Table Name</h5>
 
     <li>Model Name: This is the name you use in your JavaScript code to refer to the model (e.g., User, Product).
       It's typically singular and PascalCase.</li>
@@ -108,14 +108,14 @@ module.exports = User;
     <hr class=" my-5 opacity-30">
 
     <h5 class="text-base">Enforcing the table name to be equal to the model name</h5>
-    <p class="my-3">
+    <p class="mb-3">
       You can stop the auto-pluralization performed by Sequelize using the <span
         class="bg-primary/20 p-1 rounded">freezeTableName: true</span> option. This way,
       Sequelize will infer the table name to be equal to the model name, without any modifications:
     </p>
 
     <p>
-      <CodePreview endpoint="Modules/Users/models/user.js" code="const { DataTypes, Model } = require('sequelize');
+      <CodePreview endpoint="Modules/Users/Models/User.js" code="const { DataTypes, Model } = require('sequelize');
 const sequelize = require('@config/database');
 
 class User extends Model {}
@@ -137,7 +137,7 @@ User.init(
       The example above will create a model named User pointing to a table also named User.
     </p>
 
-    <h4 class="text-base">Model synchronization</h4>
+    <h4 class="text-base">Model synchronization ( If need you can use here too )</h4>
 
     <p>
       When you define a model, you're telling Sequelize a few things about its table in the database. However, what if
@@ -161,7 +161,7 @@ User.init(
 
     <p>
 
-      <CodePreview endpoint="Modules/Users/models/user.js" code='const { DataTypes, Model } = require("sequelize");
+      <CodePreview endpoint="Modules/Users/Models/User.js" code='const { DataTypes, Model } = require("sequelize");
 const sequelize = require("@config/database");
 
 class User extends Model {}
@@ -197,7 +197,7 @@ module.exports = User;
     </p>
 
     <p>
-      <CodePreview endpoint="Modules/Users/models/user.js" code="const { DataTypes, Model } = require('sequelize');
+      <CodePreview endpoint="Modules/Users/Models/User.js" code="const { DataTypes, Model } = require('sequelize');
 const sequelize = require('@config/database');
 
 class User extends Model {}
@@ -220,7 +220,7 @@ User.init(
     </p>
 
     <p>
-      <CodePreview endpoint="Modules/Users/models/user.js" code="const { DataTypes, Model } = require('sequelize');
+      <CodePreview endpoint="Modules/Users/Models/User.js" code="const { DataTypes, Model } = require('sequelize');
 const sequelize = require('@config/database');
 
 class User extends Model {}
@@ -248,7 +248,7 @@ User.init(
     <h5 class="text-base my-3">Column declaration</h5>
 
     <p>
-      <CodePreview endpoint="Modules/Users/models/user.js" code="const { DataTypes, Model } = require('sequelize');
+      <CodePreview endpoint="Modules/Users/Models/User.js" code="const { DataTypes, Model } = require('sequelize');
 const sequelize = require('@config/database');
 
 class User extends Model {}
@@ -282,14 +282,14 @@ User.init(
     </p>
 
     <p>
-      <CodePreview endpoint="Modules/Users/models/user.js" code="const { DataTypes } = require('sequelize'); // Import the built-in data types
+      <CodePreview endpoint="Modules/Users/Models/User.js" code="const { DataTypes } = require('sequelize'); // Import the built-in data types
 " />
     </p>
 
     <h3 class="text-sm my-3">Strings</h3>
 
     <p>
-      <CodePreview endpoint="Modules/Users/models/user.js" code="DataTypes.STRING; // VARCHAR(255)
+      <CodePreview endpoint="Modules/Users/Models/User.js" code="DataTypes.STRING; // VARCHAR(255)
 DataTypes.STRING(1234); // VARCHAR(1234)
 DataTypes.STRING.BINARY; // VARCHAR BINARY
 DataTypes.TEXT; // TEXT
@@ -302,7 +302,7 @@ DataTypes.TSVECTOR; // TSVECTOR        PostgreSQL only.
     <h3 class="text-sm my-3">Boolean</h3>
 
     <p>
-      <CodePreview endpoint="Modules/Users/models/user.js" code="DataTypes.BOOLEAN; // TINYINT(1)
+      <CodePreview endpoint="Modules/Users/Models/User.js" code="DataTypes.BOOLEAN; // TINYINT(1)
 " />
     </p>
 
@@ -310,7 +310,7 @@ DataTypes.TSVECTOR; // TSVECTOR        PostgreSQL only.
     <h3 class="text-sm my-3">Numbers</h3>
 
     <p>
-      <CodePreview endpoint="Modules/Users/models/user.js" code="DataTypes.INTEGER; // INTEGER
+      <CodePreview endpoint="Modules/Users/Models/User.js" code="DataTypes.INTEGER; // INTEGER
 DataTypes.BIGINT; // BIGINT
 DataTypes.BIGINT(11); // BIGINT(11)
 
@@ -339,7 +339,7 @@ DataTypes.DECIMAL(10, 2); // DECIMAL(10,2)
     </p>
 
     <p>
-      <CodePreview endpoint="Modules/Users/models/user.js" code="DataTypes.INTEGER.UNSIGNED;
+      <CodePreview endpoint="Modules/Users/Models/User.js" code="DataTypes.INTEGER.UNSIGNED;
 DataTypes.INTEGER.ZEROFILL;
 DataTypes.INTEGER.UNSIGNED.ZEROFILL;
 // You can also specify the size i.e. INTEGER(10) instead of simply INTEGER
@@ -350,7 +350,7 @@ DataTypes.INTEGER.UNSIGNED.ZEROFILL;
     <h3 class="text-sm my-3">Dates</h3>
 
     <p>
-      <CodePreview endpoint="Modules/Users/models/user.js" code="DataTypes.DATE; // DATETIME for mysql / sqlite, TIMESTAMP WITH TIME ZONE for postgres
+      <CodePreview endpoint="Modules/Users/Models/User.js" code="DataTypes.DATE; // DATETIME for mysql / sqlite, TIMESTAMP WITH TIME ZONE for postgres
 DataTypes.DATE(6); // DATETIME(6) for mysql 5.6.4+. Fractional seconds support with up to 6 digits of precision
 DataTypes.DATEONLY; // DATE without time
 " />
@@ -365,7 +365,7 @@ DataTypes.DATEONLY; // DATE without time
     </p>
 
     <p>
-      <CodePreview endpoint="Modules/Users/models/user.js" code="{
+      <CodePreview endpoint="Modules/Users/Models/User.js" code="{
   type: DataTypes.UUID,
   defaultValue: DataTypes.UUIDV4 // Or DataTypes.UUIDV1
 }
@@ -381,7 +381,7 @@ DataTypes.DATEONLY; // DATE without time
     </p>
 
     <p>
-      <CodePreview endpoint="Modules/Users/models/user.js" code="{
+      <CodePreview endpoint="Modules/Users/Models/User.js" code="{
   type: DataTypes.UUID,
   defaultValue: DataTypes.UUIDV4 // Or DataTypes.UUIDV1
 }
@@ -389,7 +389,7 @@ DataTypes.DATEONLY; // DATE without time
 " />
     </p>
     <br>
-    <CodePreview endpoint="Modules/Users/models/user.js" code="{
+    <CodePreview endpoint="Modules/Users/Models/User.js" code="{
       // instantiating will automatically set the flag to true if not set
       flag: { type: DataTypes.BOOLEAN, allowNull: false, defaultValue: true },
 
@@ -462,7 +462,7 @@ DataTypes.DATEONLY; // DATE without time
     </p>
 
     <p>
-      <CodePreview endpoint="Modules/Users/models/user.js" code="class User extends Model {
+      <CodePreview endpoint="Modules/Users/Models/User.js" code="class User extends Model {
   static classLevelMethod() {
     return 'foo';
   }

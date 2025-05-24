@@ -85,7 +85,7 @@ useHead({
 
         <br>
 
-        <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-3">
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-3">
 
             <div class="col-span-1">
                 <CardView icon="fa-solid fa-hexagon-nodes-bolt" title="Modules" content="
@@ -121,6 +121,15 @@ useHead({
                     Database integration offers seamless data management with ORM support, async/await, enabling easy queries, relationships, and dynamic migrations for efficient, secure, and scalable backend data operations.
                 </p>
                 " :link="`/docs/${doc_v}/database/getting-started`" />
+
+            </div>
+
+            <div class="col-span-1">
+                <CardView icon="fa-solid fa-network-wired" title="Relationships" content="
+                <p>
+                   Database model relationship associations define how tables relate, including one-to-one, one-to-many, and many-to-many, enabling structured data organization and efficient querying across connected entities.
+                </p>
+                " :link="`/docs/${doc_v}/relationships/associations`" />
 
             </div>
 
@@ -167,8 +176,17 @@ useHead({
 
             </div>
 
-
         </div>
+
+        <h5 class="text-base mt-3">Modular Architecture Overview</h5>
+        <p class="mb-3">
+            Express Recharge uses a modular architecture where each module organizes routes, controllers, middleware,
+            and models in a scalable structure. It features clean routing with HTTP methods, middleware for tasks like
+            validation and authentication, ORM-based database access with relationships, and built-in authentication
+            with role-based control. Security includes Bcrypt, input validation, and RESTful API design. Module aliases
+            simplify imports, and utilities handle file uploads, JWT, route grouping, and PDF generation—ensuring a
+            clean, maintainable, and secure backend framework.
+        </p>
 
         <div class="flex my-4 justify-between p-4">
             <NuxtLink :to="`/docs/${doc_v}/configration`" class="btn md:px-8 py-5 btn-primary">Configration</NuxtLink>
