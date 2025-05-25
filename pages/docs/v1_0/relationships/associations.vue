@@ -69,7 +69,9 @@ User.belongsToMany(post, { through: 'C', /* options */ });
     </p>
 
 
-    <h4 class="text-lg py-3">One-To-One relationships</h4>
+    <hr class=" opacity-20 my-5">
+
+    <h4 class="text-lg pb-3">One-To-One relationships</h4>
 
     <h5 class="text-base">Options</h5>
 
@@ -164,8 +166,9 @@ post.belongsTo(User);
 " />
     </p>
 
+    <hr class="opacity-20 my-5">
 
-    <h4 class="text-lg my-3">One-To-Many relationships</h4>
+    <h4 class="text-lg mb-3">One-To-Many relationships</h4>
 
     <p>
       <CodePreview endpoint="model.js" code="Team.hasMany(Player);
@@ -218,6 +221,8 @@ Player.belongsTo(Team);
     </p>
 
 
+    <hr class=" opacity-20 my-5">
+
     <h4 class="text-lg">Many-To-Many relationships</h4>
 
     <p>
@@ -240,6 +245,59 @@ Player.belongsTo(Team);
 });
 Player.belongsTo(Team);
 " />
+    </p>
+
+    <p class="my-3">
+      <CodePreview endpoint="model.js" code="const Movie = require(@module/Movie/Models/movie);
+Movie.belongsToMany(Actor, { through: 'ActorMovies' });
+" />
+    </p>
+
+    <p>
+       <CodePreview endpoint="model.js" code="const { DataTypes, Model } = require('sequelize');
+const Movie = require('@module/Movie/Models/movie');
+Actor extends Model {}
+
+Actor.init({ name: DataTypes.STRING },
+{
+sequelize,
+modelName: 'actor'
+timeStamps: true
+}
+);
+
+ActorMovies extends Model {}
+
+
+ActorMovies.init({
+  MovieId: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: Movie, // 'Movies' would also work
+      key: 'id',
+    },
+  },
+  ActorId: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: Actor, // 'Actors' would also work
+      key: 'id',
+    },
+  },
+    {
+      sequelize,
+      modelName:'actoreMovies',
+      timeStamps:false
+    }
+});
+Movie.belongsToMany(Actor, { through: ActorMovies });
+Actor.belongsToMany(Movie, { through: ActorMovies });
+" />
+     
+    </p>
+
+    <p>
+
     </p>
 
 
