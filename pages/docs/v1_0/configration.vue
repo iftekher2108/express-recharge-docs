@@ -150,24 +150,25 @@ DB_PASSWORD =
     <h5 class="text-base mb-3">This will scaffold the folder structure like:</h5>
     <p>
       <CodePreview copy="false" endpoint="Folder Architecture" 
-      code="Config/
+      code="Configs/
   ├── database.js
-  ├── rate-limiter.js
 Middlewares/
   ├── Auth.js
+  ├── rateLimiter.js  
 Modules/
   ├── Users/
-        ├── controllers/
+        ├── Controllers/
               ├── UserController.js
-        ├── middlewares/
-        ├── models/  
+        ├── Middlewares/
+        ├── Models/  
               ├── User.js     // relation to database table
-        ├── routes/
+        ├── Routes/
               ├── routes.js
+public/
 Utilities/
-  ├── file_system.js          // for upload file
-  ├── group_routes.js         // for route grouping in middleware
-  ├── html_to_pdf.js          // use puppeter for html to pdf 
+  ├── fileUpload.js          // for upload file
+  ├── groupRoute.js         // for route grouping in middleware
+  ├── helper.js          // use html to pdf etc.
   ├── jwt.js                  // for Bearer token authentication 
 .env
 .env.example
