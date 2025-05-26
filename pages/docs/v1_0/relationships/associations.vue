@@ -254,7 +254,7 @@ Movie.belongsToMany(Actor, { through: 'ActorMovies' });
     </p>
 
     <p>
-       <CodePreview endpoint="model.js" code="const { DataTypes, Model } = require('sequelize');
+      <CodePreview endpoint="model.js" code="const { DataTypes, Model } = require('sequelize');
 const Movie = require('@module/Movie/Models/movie');
 Actor extends Model {}
 
@@ -293,13 +293,228 @@ ActorMovies.init({
 Movie.belongsToMany(Actor, { through: ActorMovies });
 Actor.belongsToMany(Movie, { through: ActorMovies });
 " />
-     
+
+    </p>
+
+    <h5 class="text-base mb-3">
+      Eager Loading Example
+    </h5>
+
+    <p>
+      <CodePreview endpoint="model.js" code="const awesomeCaptain = await Captain.findOne({
+  where: {
+    name: 'Jack Sparrow',
+  },
+  include: Ship,
+});
+// Now the ship comes with it
+console.log('Name:', awesomeCaptain.name);
+console.log('Skill Level:', awesomeCaptain.skillLevel);
+console.log('Ship Name:', awesomeCaptain.ship.name);
+console.log('Amount of Sails:', awesomeCaptain.ship.amountOfSails);
+" />
+    </p>
+
+    <p class="my-3">
+      As shown above, Eager Loading is performed in Sequelize by using the include option. Observe that here only one
+      query was performed to the database (which brings the associated data along with the instance).
+    </p>
+
+    <p class="my-3">
+      This was just a quick introduction to Eager Loading in Sequelize. There is a lot more to it, which you can learn
+      at the <NuxtLink class="text-primary" target="_blank"
+        to="https://sequelize.org/docs/v6/advanced-association-concepts/eager-loading/">dedicated guide on Eager Loading
+      </NuxtLink>.
+    </p>
+
+    <hr class=" opacity-20 my-5">
+
+    <h4 class="text-lg my-3">Creating, updating and deleting</h4>
+
+    <p>
+      The above showed the basics on queries for fetching data involving associations. For creating, updating and
+      deleting, you can either:
+    </p>
+
+    <li class="mb-3">Use the standard model queries directly:</li>
+
+    <p>
+      <CodePreview endpoint="model.js" code="// Example: creating an associated model using the standard methods
+Bar.create({
+  name: 'My Bar',
+  fooId: 5,
+});
+// This creates a Bar belonging to the Foo of ID 5 (since fooId is
+// a regular column, after all). Nothing very clever going on here.
+" />
+    </p>
+
+    <p class="my-3">
+      <span class="text-error font-bold">Note:</span> The save() instance method is not aware of associations. In other
+      words, if you change a value from a child
+      object that was eager loaded along a parent object, calling save() on the parent will completely ignore the change
+      that happened on the child.
+    </p>
+
+    <h5 class="text-base">the default setup</h5>
+    <p class="mb-3">
+      By using simply Ship.belongsTo(Captain), sequelize will generate the foreign key name automatically:
     </p>
 
     <p>
+      <CodePreview endpoint="model.js" code="Ship.belongsTo(Captain); // This creates the `captainId` foreign key in Ship.
 
+// Eager Loading is done by passing the model to `include`:
+console.log((await Ship.findAll({ include: Captain })).toJSON());
+// Or by providing the associated model name:
+console.log((await Ship.findAll({ include: 'captain' })).toJSON());
+
+// Also, instances obtain a `getCaptain()` method for Lazy Loading:
+const ship = Ship.findOne();
+console.log((await ship.getCaptain()).toJSON());
+" />
     </p>
 
+    <h5 class="text-base my-3">Providing the foreign key name directly</h5>
+
+    <p class="mb-3">
+      The foreign key name can be provided directly with an option in the association definition, as follows:
+    </p>
+
+    <p>
+      <CodePreview endpoint="model.js" code="Ship.belongsTo(Captain, { foreignKey: 'bossId' }); // This creates the `bossId` foreign key in Ship.
+
+// Eager Loading is done by passing the model to `include`:
+console.log((await Ship.findAll({ include: Captain })).toJSON());
+// Or by providing the associated model name:
+console.log((await Ship.findAll({ include: 'Captain' })).toJSON());
+
+// Also, instances obtain a `getCaptain()` method for Lazy Loading:
+const ship = await Ship.findOne();
+console.log((await ship.getCaptain()).toJSON());
+" />
+    </p>
+
+    <h5 class="text-base my-3">Defining an Alias</h5>
+
+    <p>
+      Defining an Alias is more powerful than simply specifying a custom name for the foreign key. This is better
+      understood with an example:
+    </p>
+
+    <p>
+      <CodePreview endpoint="model.js" code="Ship.belongsTo(Captain, { as: 'leader' }); // This creates the `leaderId` foreign key in Ship.
+
+// Eager Loading no longer works by passing the model to `include`:
+console.log((await Ship.findAll({ include: Captain })).toJSON()); // Throws an error
+// Instead, you have to pass the alias:
+console.log((await Ship.findAll({ include: 'leader' })).toJSON());
+// Or you can pass an object specifying the model and alias:
+console.log(
+  (
+    await Ship.findAll({
+      include: {
+        model: Captain,
+        as: 'leader',
+      },
+    })
+  ).toJSON(),
+);
+
+// Also, instances obtain a `getLeader()` method for Lazy Loading:
+const ship = await Ship.findOne();
+console.log((await ship.getLeader()).toJSON());
+" />
+    </p>
+
+    <p class="mt-3">
+      Aliases are especially useful when you need to define two different associations between the same models. For
+      example, if we have the models Mail and Person, we may want to associate them twice, to represent the sender and
+      receiver of the Mail. In this case we must use an alias for each association, since otherwise a call like
+      mail.getPerson() would be ambiguous. With the sender and receiver aliases, we would have the two methods available
+      and working: mail.getSender() and mail.getReceiver(), both of them returning a Promise.
+    </p>
+
+    <p>
+      When defining an alias for a hasOne or belongsTo association, you should use the singular form of a word (such as
+      leader, in the example above). On the other hand, when defining an alias for hasMany and belongsToMany, you should
+      use the plural form. Defining aliases for Many-to-Many relationships (with belongsToMany) is covered in the
+      <NuxtLink class="text-primary" target="_blank"
+        to="https://sequelize.org/docs/v6/advanced-association-concepts/advanced-many-to-many/">Advanced Many-to-Many
+        Associations guide</NuxtLink>.
+    </p>
+
+    <hr class=" opacity-20 my-5">
+
+    <h5 class="text-base my-3">Doing both things</h5>
+
+    <p class="mb-3">
+      We can define and alias and also directly define the foreign key:
+    </p>
+
+    <p>
+      <CodePreview endpoint="model.js" code="Ship.belongsTo(Captain, { as: 'leader', foreignKey: 'bossId' }); // This creates the `bossId` foreign key in Ship.
+
+// Since an alias was defined, eager Loading doesn't work by simply passing the model to `include`:
+console.log((await Ship.findAll({ include: Captain })).toJSON()); // Throws an error
+// Instead, you have to pass the alias:
+console.log((await Ship.findAll({ include: 'leader' })).toJSON());
+// Or you can pass an object specifying the model and alias:
+console.log(
+  (
+    await Ship.findAll({
+      include: {
+        model: Captain,
+        as: 'leader',
+      },
+    })
+  ).toJSON(),
+);
+
+// Also, instances obtain a `getLeader()` method for Lazy Loading:
+const ship = await Ship.findOne();
+console.log((await ship.getLeader()).toJSON());
+" />
+    </p>
+
+
+    <h4 class="text-lg my-3">Special methods/mixins added to instances</h4>
+
+    <p>
+      When an association is defined between two models, the instances of those models gain special methods to interact
+      with their associated counterparts.
+    </p>
+
+    <p class="mb-3">
+      For example, if we have two models, Foo and Bar, and they are associated, their instances will have the following
+      methods/mixins available, depending on the association type:
+    </p>
+
+
+    <h5 class="text-base my-3">foo.hasOne(Bar)</h5>
+    <li>foo.getBar()</li>
+    <li>foo.setBar()</li>
+    <li>foo.createBar()</li>
+
+    <p class="my-3">Example:</p>
+
+    <p>
+      <CodePreview endpoint="model.js" code="const foo = await Foo.create({ name: 'the-foo' });
+const bar1 = await Bar.create({ name: 'some-bar' });
+const bar2 = await Bar.create({ name: 'another-bar' });
+console.log(await foo.getBar()); // null
+await foo.setBar(bar1);
+console.log((await foo.getBar()).name); // 'some-bar'
+await foo.createBar({ name: 'yet-another-bar' });
+const newlyAssociatedBar = await foo.getBar();
+console.log(newlyAssociatedBar.name); // 'yet-another-bar'
+await foo.setBar(null); // Un-associate
+console.log(await foo.getBar()); // null
+" />
+    </p>
+
+
+    
 
   </div>
 </template>
