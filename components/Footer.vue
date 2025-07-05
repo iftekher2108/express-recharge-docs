@@ -1,5 +1,5 @@
 <script setup>
-const doc_v = "v1_0"
+const doc_v = "v1"
 const date = new Date();
 
 </script>
