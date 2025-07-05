@@ -1,5 +1,5 @@
 <script setup>
-const doc_v = "v1_0"
+const doc_v = "v1"
 definePageMeta({
     layout: 'docs'
 })
@@ -73,7 +73,7 @@ app.use((req, res, next) => {
         <p>
             <CodePreview endpoint="Middlewares/Auth.js" code='const jwt = require("jsonwebtoken");
 const User = require("@modules/Users/model/User");
-const { verifyToken } = require("@utils/jwt");
+const { verifyToken } = require("recharge-utils");
 
 const Auth = async (req, res, next) => {
   const token = req.headers["authorization"]?.split(" ")[1]; // Get token from the header (Authorization: Bearer <token>)
